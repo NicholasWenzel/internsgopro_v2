@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :employers
   resources :offers
   resources :places
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  country: MyString
+  city: MyString
+  sector: MyString
+  label: 
+  logo: 
+  photo: 
+  video: 
+  descr0_title: MyString
+  descr0_full: MyText
+  descr1_title: MyString
+  descr1_full: MyText
+  descr2_title: MyString
+  descr2_full: MyText
+
+two:
+  name: MyString
+  country: MyString
+  city: MyString
+  sector: MyString
+  label: 
+  logo: 
+  photo: 
+  video: 
+  descr0_title: MyString
+  descr0_full: MyText
+  descr1_title: MyString
+  descr1_full: MyText
+  descr2_title: MyString
+  descr2_full: MyText

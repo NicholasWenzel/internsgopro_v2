@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Employers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>Sector</th>
+      <th>Label</th>
+      <th>Logo</th>
+      <th>Photo</th>
+      <th>Video</th>
+      <th>Descr0 title</th>
+      <th>Descr0 full</th>
+      <th>Descr1 title</th>
+      <th>Descr1 full</th>
+      <th>Descr2 title</th>
+      <th>Descr2 full</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @employers.each do |employer| %>
+      <tr>
+        <td><%= employer.name %></td>
+        <td><%= employer.country %></td>
+        <td><%= employer.city %></td>
+        <td><%= employer.sector %></td>
+        <td><%= employer.label %></td>
+        <td><%= employer.logo %></td>
+        <td><%= employer.photo %></td>
+        <td><%= employer.video %></td>
+        <td><%= employer.descr0_title %></td>
+        <td><%= employer.descr0_full %></td>
+        <td><%= employer.descr1_title %></td>
+        <td><%= employer.descr1_full %></td>
+        <td><%= employer.descr2_title %></td>
+        <td><%= employer.descr2_full %></td>
+        <td><%= link_to 'Show', employer %></td>
+        <td><%= link_to 'Edit', edit_employer_path(employer) %></td>
+        <td><%= link_to 'Destroy', employer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Employer', new_employer_path %>

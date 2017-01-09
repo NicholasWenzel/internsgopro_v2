@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170109111601) do
+ActiveRecord::Schema.define(version: 20170109113541) do
+
+  create_table "employers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "country"
+    t.string   "city"
+    t.string   "sector"
+    t.binary   "label"
+    t.binary   "logo"
+    t.binary   "photo"
+    t.binary   "video"
+    t.string   "descr0_title"
+    t.text     "descr0_full"
+    t.string   "descr1_title"
+    t.text     "descr1_full"
+    t.string   "descr2_title"
+    t.text     "descr2_full"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "offers", force: :cascade do |t|
     t.string   "name"
