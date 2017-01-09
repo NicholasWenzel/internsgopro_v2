@@ -1,0 +1,77 @@
+<%= form_for(@offer) do |f| %>
+  <% if @offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
+
+      <ul>
+      <% @offer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :employer %><br>
+    <%= f.text_field :employer %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :sector %><br>
+    <%= f.text_field :sector %>
+  </div>
+  <div class="field">
+    <%= f.label :posted %><br>
+    <%= f.date_select :posted %>
+  </div>
+  <div class="field">
+    <%= f.label :deadline %><br>
+    <%= f.date_select :deadline %>
+  </div>
+  <div class="field">
+    <%= f.label :salary %><br>
+    <%= f.number_field :salary %>
+  </div>
+  <div class="field">
+    <%= f.label :label %><br>
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :job_description %><br>
+    <%= f.text_area :job_description %>
+  </div>
+  <div class="field">
+    <%= f.label :candidate_profile %><br>
+    <%= f.text_area :candidate_profile %>
+  </div>
+  <div class="field">
+    <%= f.label :organisation_description %><br>
+    <%= f.text_area :organisation_description %>
+  </div>
+  <div class="field">
+    <%= f.label :offer %><br>
+    <%= f.text_area :offer %>
+  </div>
+  <div class="field">
+    <%= f.label :apply %><br>
+    <%= f.text_area :apply %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

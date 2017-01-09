@@ -11,12 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160717150900) do
+ActiveRecord::Schema.define(version: 20170109111601) do
+
+  create_table "offers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "employer"
+    t.string   "country"
+    t.string   "city"
+    t.string   "sector"
+    t.date     "posted"
+    t.date     "deadline"
+    t.integer  "salary"
+    t.string   "label"
+    t.string   "type"
+    t.text     "job_description"
+    t.text     "candidate_profile"
+    t.text     "organisation_description"
+    t.text     "offer"
+    t.text     "apply"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "places", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "country"
   end
 
 end

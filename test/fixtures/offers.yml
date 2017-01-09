@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  employer: MyString
+  country: MyString
+  city: MyString
+  sector: MyString
+  posted: 2017-01-09
+  deadline: 2017-01-09
+  salary: 1
+  label: MyString
+  type: 
+  job_description: MyText
+  candidate_profile: MyText
+  organisation_description: MyText
+  offer: MyText
+  apply: MyText
+
+two:
+  name: MyString
+  employer: MyString
+  country: MyString
+  city: MyString
+  sector: MyString
+  posted: 2017-01-09
+  deadline: 2017-01-09
+  salary: 1
+  label: MyString
+  type: 
+  job_description: MyText
+  candidate_profile: MyText
+  organisation_description: MyText
+  offer: MyText
+  apply: MyText
