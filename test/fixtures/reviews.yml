@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employer: MyString
+  country: MyString
+  sector: MyString
+  salary: 1
+  recommendation: MyString
+  score: 9.99
+
+two:
+  employer: MyString
+  country: MyString
+  sector: MyString
+  salary: 1
+  recommendation: MyString
+  score: 9.99
