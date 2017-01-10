@@ -20,14 +20,13 @@
       <th>Salary</th>
       <th>Label</th>
       <th>Type</th>
-
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @offers.each do |offer| %>
-      <tr class='clickable-row' data-href='http://www.internsgopro.com'>
+      <tr>
         <td><%= offer.name %></td>
         <td><%= offer.employer %></td>
         <td><%= offer.country %></td>
@@ -38,14 +37,18 @@
         <td><%= offer.salary %></td>
         <td><%= offer.label %></td>
         <td><%= offer.type %></td>
-
+        <td><%= offer.job_description %></td>
+        <td><%= offer.candidate_profile %></td>
+        <td><%= offer.organisation_description %></td>
+        <td><%= offer.offer %></td>
+        <td><%= offer.apply %></td>
         <td><%= link_to 'Show', offer %></td>
+        <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+        <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-
 </table>
-
 
 <br>
 

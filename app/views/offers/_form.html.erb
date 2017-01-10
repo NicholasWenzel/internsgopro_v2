@@ -12,7 +12,7 @@
   <% end %>
 
 
-<%= f.input :name %>
+<%= f.input :name, :input_html => {:maxlength =>30,:style=> 'width: 170px'}%>
 <%= f.input :employer %>
 <div class="field">
   <%= f.label :country %><br>
