@@ -8,6 +8,13 @@
 </head>
 <body>
 
+
+
+<div class="container">
+  <% flash.each do |key, message| %>
+    <div><%= message %></div>
+  <% end %>
+
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -45,13 +52,6 @@
 
     </div>
   </nav>
-
-
-
-<div class="container">
-  <% flash.each do |key, message| %>
-    <div><%= message %></div>
-  <% end %>
 
 <%= yield %>
 </div>

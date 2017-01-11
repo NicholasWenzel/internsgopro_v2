@@ -27,8 +27,8 @@
 
   <tbody>
     <% @offers.each do |offer| %>
-      <tr class='clickable-row' data-href='http://www.internsgopro.com'>
-        <td><%= offer.name %></td>
+      <tr>
+        <td><%= link_to offer.name, offer %></td>
         <td><%= offer.employer %></td>
         <td><%= offer.country %></td>
         <td><%= offer.city %></td>
