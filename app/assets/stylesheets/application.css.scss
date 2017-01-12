@@ -79,3 +79,29 @@ body {
 tr {
     cursor: pointer;
 }
+
+// CSS CUSTOM STYLING //
+
+.navbar {
+  height: 80px;
+  padding-top: 18px;
+  margin-bottom: 0;
+}
+
+.navbar-default {
+  background-color: white;
+}
+
+.container {
+  padding: 0;
+  position: relative;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 100%;
+  line-height: 23px;
+  font-weight: 500;
+}
+
+.navbar-header {
+  padding-bottom: 10px;
+}

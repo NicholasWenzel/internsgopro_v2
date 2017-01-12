@@ -21,6 +21,7 @@
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand" href="http://www.internsgopro.com">
+            <%= link_to "Home", employers_path, class: "navbar-brand" %>
           <img id="navbar-logo" class="img-responsive" src="images/logo.png" alt="internsgopro logo">
         </a>
         <button type="button" class="navbar-toggle collapsed"
@@ -37,36 +38,21 @@
       <div class="collapse navbar-collapse" id="collapse">
         <ul class="nav navbar-nav">
           <li class="<%= "active" if current_page?("/") %>">
-            <%= link_to "Find Internships", offers_path %>
+            <%= link_to "Offers", offers_path %>
           </li>
         </ul>
 
         <ul class="nav navbar-nav">
           <li class="<%= "active" if current_page?("/") %>">
-            <%= link_to "Best Employers", employers_path %>
+            <%= link_to "Employers", employers_path %>
           </li>
         </ul>
 
         <ul class="nav navbar-nav">
           <li class="<%= "active" if current_page?("/") %>">
-            <%= link_to "Internship Reviews", reviews_path %>
+            <%= link_to "Reviews", reviews_path %>
           </li>
         </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="<%= "active" if current_page?("/") %>">
-            <%= link_to "Get the label", reviews_path %>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav">
-          <li class="<%= "active" if current_page?("/") %>">
-            <%= link_to "About us", reviews_path %>
-          </li>
-        </ul>
-
-    
-
       </div>
 
 
