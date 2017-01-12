@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nofuckingidea</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title>InternsGoPro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div id="top-header">
+  <div class="container-fluid">
+    <a style="display:inline-block;" href="mailto:community@internsgopro.com">
+      <i class="fa fa-envelope"></i> <span>community@internsgopro.com</span>
+    </a>
+
+    <a target="_blank" class="social facebook" href="http://www.facebook.com/internsgopro">
+      <i class="fa fa-facebook"></i>
+    </a>
+
+    <a target="_blank" class="social twitter" href="http://www.twitter.com/internsgopro">
+      <i class="fa fa-twitter"></i>
+    </a>
+
+  </div>
+
+</div>
 
 
 <div class="container">
@@ -18,10 +36,10 @@
 
 
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="http://www.internsgopro.com">
-          <img id="navbar-logo" class="img-responsive" src="images/logo.png" alt="internsgopro logo">
+          <img id="navbar-logo" class="img-responsive" src="/logo.png" alt="internsgopro logo">
         </a>
         <button type="button" class="navbar-toggle collapsed"
           data-toggle="collapse" data-target="#collapse">
@@ -34,7 +52,7 @@
       </div>
 
 
-      <div class="collapse navbar-collapse" id="collapse">
+      <div class="collapse navbar-collapse" id="collapse" style="position: relative; left: 255px;">
         <ul class="nav navbar-nav">
           <li class="<%= "active" if current_page?("/") %>">
             <%= link_to "Find Internships", offers_path %>
@@ -65,13 +83,18 @@
           </li>
         </ul>
 
-    
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/fr/employers/filters/all/all/all/all/all/label/desc/page">
+              <img alt="Français" title="Français" src="/french.png">
+            </a>
+          </li>
+        </ul>
 
       </div>
-
-
     </div>
   </nav>
+
 
 <%= yield %>
 </div>
