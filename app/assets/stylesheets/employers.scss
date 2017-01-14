@@ -1,3 +1,200 @@
 // Place all the styles related to the employers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.picture {
+  background-image: url();
+}
+
+.panel-big {
+  height:220px;
+  z-index: 10;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 15px 15px -2px #d9d9d9
+}
+
+.employer-box::before {
+  background: #f5c127;
+  content: '';
+  height: 5px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: block;
+}
+
+.padding {
+  padding: 5px;
+}
+
+.text-info {
+  color: #999;
+}
+
+// Hover section //
+
+.panel-bottom {
+
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    margin-top: -2px;
+    background: #fff;
+    width: 100%;
+    padding-bottom: 10px;
+    height: 40px;
+    background-color: #fff;
+    box-shadow: 0 15px 15px -2px #d9d9d9;
+}
+
+.panel-big:hover > .panel-bottom {
+  display: block;
+  z-index: 11;
+}
+
+
+
+ul.panel-tabs {
+    margin: 0 0 0 10px;
+    width: 100%;
+    position: relative;
+}
+
+ul.inline-list {
+    list-style: none;
+  }
+
+li {
+  display: inline;
+
+}
+
+// Testing CSS
+
+.play {
+  height: 10px;
+  position: relative;
+}
+
+
+
+// New employer boxes position the box in a container
+.employer-col {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+
+}
+
+.employer-box {
+  width: 100%;
+  min-height: 200px;
+
+  background: #fff;
+  border: 0px solid transparent;
+  margin-bottom: 30px;
+
+  // scale the box from horizontal center, and vertical top
+  transform-origin: 50% 0;
+  -webkit-transform-origin: 50% 0;
+
+  // apply a transition
+  transition: transform .5s ease-out;
+  -webkit-transition: transform .5s ease-out;
+  box-shadow: 0 15px 15px -2px #d9d9d9
+}
+
+.employer-box__footer {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  padding: 10px;
+}
+
+// on hover, scale the box 1.
+// and display the footer
+.employer-box:hover {
+  z-index: 20;
+
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.employer-box:hover .employer-box__footer {
+    display: block;
+}
+
+.employer-top {
+  position: absolute;
+  vertical-align: top;
+  height: 5px;
+  background-color: #f5c127;
+  padding: -5px;
+  width: 30%;
+
+}
+
+li.bottom {
+  font-size: 16px;
+  line-height: 20.8px;
+
+  font-weight: 300;
+}
+
+ul.panel-tabs li {
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+    border-right: 1px solid #d9d9d9;
+    width: 78px;
+}
+
+ul.panel-tabs li.test {
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+
+    width: 78px;
+}
+
+ul.panel-tabs {
+    margin-left: auto;
+    width: 100%;
+    position: relative;
+
+}
+
+ul {
+  padding-left: 0;
+}
+
+.inline-list {
+  list-style: none;
+}
+
+.inline-list>li {
+    float: left;
+}
+
+.employer-pic {
+  background-image: url("/employer.png");
+}
+
+.employer-pic {
+  background: url(/horses.png) no-repeat center center fixed;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 400px;
+  top: 80px;
+  margin-bottom: 70px;
+}
+
+.container.employer-list {
+  padding: 0px;
+}

@@ -1,3 +1,24 @@
 // Place all the styles related to the offers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.banner {
+  background: url(/girl.jpg) no-repeat center center fixed;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 450px;
+  top: 80px;
+  margin-bottom: 100px;
+}
+
+.banner-text {
+  position: absolute;
+  font-size: 26px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  line-height: 26px;
+}

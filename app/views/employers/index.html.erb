@@ -1,8 +1,58 @@
 <p id="notice"><%= notice %></p>
 
+
+</div> // End of container div.
+
+<div class="employer-pic"></div>
+
+
+  <div class="container employer-list">
+    <div class="page-header"><h1>Certified companies</h1></div>
+    <br>
+    <div class="row">
+      <% @employers.each do |employer| %>
+        <div class="col-md-3">
+          <div class="employer-box">
+            <div class="padding">
+              <a href="/unternehmen/89-p-absolventa-gmbh">
+                <div class="logo-wrapper--big">
+                  <img alt="Absolventa GmbH" title="Absolventa GmbH" src="/logo2.png">
+                </div>
+                <br>
+                <%= link_to employer.name, employer %>
+              </a>
+              <br>
+                <div class="text-info">
+                    <%= employer.city %>
+                </div>
+            </div>
+              <div class="employer-box__footer">
+                <ul class="inline-list panel-tabs">
+                  <li class="bottom">
+                    <a href="/">Jobs</a>
+                  </li>
+                  <li class="bottom">
+                    <a href="/">Reviews</a>
+                  </li>
+                  <li class="bottom">
+                    <a href="/">Awards</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<div class="container">
+
+<div class="play">LOREM<div class="test2"></div></div>
+<%= link_to 'New Employer', new_employer_path %>
+
 <div class="page-header">
   <h1>Listing Employers</h1>
 </div>
+
 
 <table class="table table-hover">
   <thead>
@@ -51,5 +101,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Employer', new_employer_path %>
