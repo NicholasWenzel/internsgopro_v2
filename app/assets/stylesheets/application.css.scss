@@ -19,6 +19,15 @@
 @import "font-awesome";
 
 
+// - - - - -Variables - - - - //
+
+$white: #FFFFFF;
+$orange: #ffa300;
+$blue: #2e1a47;
+$dark_grey: #7f7f7f;
+$light_grey: #d8dcde;
+
+// - - - - -End of Variables - - - - //
 
 .page-header {
           position: relative;
@@ -31,6 +40,14 @@
 h1, h2, h3, h4, h5, h6 {
   max-width: 55%;
   }
+}
+
+a {
+  color: #666;
+}
+
+a:visited {
+  color: $dark_grey;
 }
 
 ul.actions {
