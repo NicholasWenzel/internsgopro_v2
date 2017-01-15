@@ -3,12 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .banner {
-  background: url(/girl.jpg) no-repeat center center fixed;
+  background-image: url(/girl.jpg);
   position: relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  height: 450px;
+  height: 500px;
   top: 80px;
   margin-bottom: 100px;
 }

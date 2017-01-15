@@ -188,12 +188,12 @@ ul {
 }
 
 .employer-pic {
-  background: url(/horses.png) no-repeat center center fixed;
+  background-image: url(/horses.png);
   position: relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  height: 400px;
+  height: 500px;
   top: 80px;
   margin-bottom: 70px;
 }
