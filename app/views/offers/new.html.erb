@@ -1,9 +1,8 @@
-<div class="page-header">
-  <h1>New Offer</h1>
-</div>
-
-
-<%= render 'form' %>
-
-
-<%= link_to 'Back', offers_path %>
+<header>
+<div style="margin-top: 150px;"></div>
+  <h1>
+    New Offer
+      <small><%= @employer.name %></small>
+    </h1>
+</header>
+        <%= render "form", employer: @employer, offer: @offer %>

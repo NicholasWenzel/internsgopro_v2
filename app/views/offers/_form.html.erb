@@ -1,37 +1,1 @@
-<%= simple_form_for(@offer) do |f| %>
-  <% if @offer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
-
-      <ul>
-      <% @offer.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
-<%= f.input :name, :input_html => {:maxlength =>30,:style=> 'width: 170px'}%>
-<%= f.input :employer %>
-<div class="field">
-  <%= f.label :country %><br>
-  <%= f.text_field :country %>
-</div>
-<%= f.input :city %>
-<%= f.input :sector %>
-<%= f.input :posted %>
-<%= f.input :deadline %>
-<%= f.input :salary %>
-<%= f.input :label %>
-<%= f.input :type %>
-<%= f.input :job_description %>
-<%= f.input :candidate_profile %>
-<%= f.input :organisation_description %>
-<%= f.input :offer %>
-<%= f.input :apply %>
-
-
-<%= f.button :submit, class: "btn-primary" %>
-
-<% end %>
+<%= simple_form_for([employer, offer]) do |f| %><%= f.input :name %><%= f.input :employer %><%= f.input :city %><%= f.input :sector %><%= f.input :posted %><%= f.input :deadline %><%= f.input :salary %><%= f.input :label %><%= f.input :type %><%= f.input :job_description %><%= f.input :candidate_profile %><%= f.input :organisation_description %><%= f.input :offer %><%= f.input :apply %><%= f.button :submit, class: "btn-primary" %><% end %>

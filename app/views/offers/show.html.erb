@@ -1,91 +1,41 @@
-   <div class="page-header">
-          <h1><%= @offer.name %></h1>
-          <ul class="actions">
-            <li><%= link_to "Edit Offer", edit_offer_path(@offer), class: "edit" %></li>
-            <li><%= link_to "Delete Offer", offer_path(@offer),
-               method: :delete,
-               data: { confirm: "Are you sure you want to delete this project?" },
-               class: "delete" %></li>
-          </ul>
-  </div>
+
+<div style="margin-top:120px"></div>
+<div id="offer">
+  <header>
+    <h1><%= @employer.name %></h1>
+  </header>
+  <header>
+
+    <h2><%= @offer.name %></h2>
+    <strong>employer:</strong>
+    <%= @offer.employer %><br>
+    <strong>city:</strong>
+    <%= @offer.city %><br>
+    <strong>sector:</strong>
+    <%= @offer.sector %><br>
+    <strong>posted at:</strong>
+    <%= @offer.posted %><br>
+    <strong>deadline:</strong>
+    <%= @offer.deadline %><br>
+    <strong>salary:</strong>
+    <%= @offer.salary %><br>
+    <strong>label:</strong>
+    <%= @offer.label %><br>
+    <strong>type:</strong>
+    <%= @offer.type %><br>
+    <strong>job description:</strong>
+    <%= @offer.job_description %><br>
+    <strong>candidate profile:</strong>
+    <%= @offer.candidate_profile %><br>
+    <strong>organisation description:</strong>
+    <%= @offer.organisation_description %><br>
+    <strong>offer:</strong>
+    <%= @offer.offer %><br>
+    <strong>apply:</strong>
+    <%= @offer.apply %><br>
 
 
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @offer.name %>
-</p>
-
-<p>
-  <strong>Employer:</strong>
-  <%= @offer.employer %>
-</p>
-
-<p>
-  <strong>Country:</strong>
-  <%= @offer.country %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @offer.city %>
-</p>
-
-<p>
-  <strong>Sector:</strong>
-  <%= @offer.sector %>
-</p>
-
-<p>
-  <strong>Posted:</strong>
-  <%= @offer.posted %>
-</p>
-
-<p>
-  <strong>Deadline:</strong>
-  <%= @offer.deadline %>
-</p>
-
-<p>
-  <strong>Salary:</strong>
-  <%= @offer.salary %>
-</p>
-
-<p>
-  <strong>Label:</strong>
-  <%= @offer.label %>
-</p>
-
-<p>
-  <strong>Type:</strong>
-  <%= @offer.type %>
-</p>
-
-<p>
-  <strong>Job description:</strong>
-  <%= @offer.job_description %>
-</p>
-
-<p>
-  <strong>Candidate profile:</strong>
-  <%= @offer.candidate_profile %>
-</p>
-
-<p>
-  <strong>Organisation description:</strong>
-  <%= @offer.organisation_description %>
-</p>
-
-<p>
-  <strong>Offer:</strong>
-  <%= @offer.offer %>
-</p>
-
-<p>
-  <strong>Apply:</strong>
-  <%= @offer.apply %>
-</p>
-
-<%= link_to 'Edit', edit_offer_path(@offer) %> |
-<%= link_to 'Back', offers_path %>
+</header>
+  <%= simple_format(@offer.employer) %>
+</div>
