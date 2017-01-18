@@ -80,3 +80,15 @@
   <li><%= link_to "New Offer", new_employer_offer_path(@employer),
     class: "new" %></li>
 </ul>
+
+
+<h1>Available Offers</h1>
+
+<ul id="offers">
+  <% @employer.offers.each do |offer| %>
+    <li>
+      #<%= offer.id %> -
+      <%= link_to offer.name, [@employer, offer] %><br>
+    </li>
+  <% end %>
+</ul>
