@@ -25,6 +25,10 @@
       <i class="fa fa-twitter"></i>
     </a>
 
+<li class="<%= "active" if current_page?("/users/sign_up") %>">
+  <%= link_to "Sign up", new_user_registration_path %>
+</li>
+
   </div>
 
 </div>
