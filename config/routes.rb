@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   namespace :admin do
   root "application#index"
+
+  resources :employers, only: [:new, :create, :destroy]
 end
 
   devise_for :users
   resources :reviews
-  resources :employers do
+  resources :employers, only: [:index, :show, :edit, :update] do
     resources :offers
   end
 

@@ -1,0 +1,73 @@
+<%= simple_form_for([:admin, employer]) do |f| %>
+  <% if @employer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employer.errors.count, "error") %> prohibited this employer from being saved:</h2>
+
+      <ul>
+      <% @employer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :sector %><br>
+    <%= f.text_field :sector %>
+  </div>
+  <div class="field">
+    <%= f.label :label %><br>
+    <%= f.text_field :label %>
+  </div>
+  <div class="field">
+    <%= f.label :logo %><br>
+    <%= f.text_field :logo %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.text_field :video %>
+  </div>
+  <div class="field">
+    <%= f.label :descr0_title %><br>
+    <%= f.text_field :descr0_title %>
+  </div>
+  <div class="field">
+    <%= f.label :descr0_full %><br>
+    <%= f.text_area :descr0_full %>
+  </div>
+  <div class="field">
+    <%= f.label :descr1_title %><br>
+    <%= f.text_field :descr1_title %>
+  </div>
+  <div class="field">
+    <%= f.label :descr1_full %><br>
+    <%= f.text_area :descr1_full %>
+  </div>
+  <div class="field">
+    <%= f.label :descr2_title %><br>
+    <%= f.text_field :descr2_title %>
+  </div>
+  <div class="field">
+    <%= f.label :descr2_full %><br>
+    <%= f.text_area :descr2_full %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
