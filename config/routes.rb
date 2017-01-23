@@ -9,14 +9,14 @@ end
   devise_for :users
   resources :reviews
   resources :employers, only: [:index, :show, :edit, :update] do
-    resources :offers
+    resources :offers, except: :index
   end
 
   resources :offers
   resources :places
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+get 'offers' => 'offers#index'
   # You can have the root of your site routed with "root"
   root 'employers#index'
 

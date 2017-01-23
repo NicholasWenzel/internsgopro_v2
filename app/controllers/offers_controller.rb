@@ -1,9 +1,17 @@
 class OffersController < ApplicationController
-  before_action :set_employer
-  before_action :set_offer, only: [:show, :edit, :update, :destroy]
+  before_action :set_employer, only: [:edit, :update, :destroy, :new, :create, :edit]
+  before_action :set_offer, only: [:edit, :update, :destroy]
 
 def new
   @offer = @employer.offers.build
+end
+
+def index
+  if params[:employer_id]
+    @offers = Employer.find(params[:employer_id]).offers
+  else
+    @offers = Offer.all
+  end
 end
 
 def create
@@ -19,6 +27,8 @@ def create
 end
 
 def show
+  @offer = Offer.find(params[:id])
+
 end
 
   private
