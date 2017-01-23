@@ -2,16 +2,7 @@
 
 <div style="margin-top: 150px;">
 
-  <%= simple_format(@employer.name) %>
-   <% if @employer.attachment.present? %>
-          <h4>Attachment</h4>
-          <div class="attachment">
-            <p>
-              <%= link_to File.basename(@employer.attachment.url),
-                @employer.attachment.url %>
-             (<%= number_to_human_size(@employer.attachment.size) %>)
-</p> </div>
-<% end %>
+
 <p>
   <strong>Name:</strong>
   <%= @employer.name %>
@@ -107,4 +98,15 @@
     </li>
 
 </ul>
+<% end %>
+
+<%= simple_format(@employer.name) %>
+ <% if @employer.attachment.present? %>
+        <h4>Attachment</h4>
+        <div class="attachment">
+          <p>
+            <%= link_to File.basename(@employer.attachment.url),
+              @employer.attachment.url %><br><%= image_tag (@employer.attachment.url) %>
+           (<%= number_to_human_size(@employer.attachment.size) %>)
+</p> </div>
 <% end %>
