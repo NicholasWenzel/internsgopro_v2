@@ -45,6 +45,6 @@ class EmployersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def employer_params
-      params.require(:employer).permit(:name, :country, :city, :sector, :label, :logo, :photo, :video, :descr0_title, :descr0_full, :descr1_title, :descr1_full, :descr2_title, :descr2_full)
+      params.require(:employer).permit(:name, :country, :city, :sector, :label, :logo, :photo, :video, :descr0_title, :descr0_full, :descr1_title, :descr1_full, :descr2_title, :descr2_full, :attachment)
     end
 end

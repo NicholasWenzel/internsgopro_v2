@@ -2,6 +2,16 @@
 
 <div style="margin-top: 150px;">
 
+  <%= simple_format(@employer.name) %>
+   <% if @employer.attachment.present? %>
+          <h4>Attachment</h4>
+          <div class="attachment">
+            <p>
+              <%= link_to File.basename(@employer.attachment.url),
+                @employer.attachment.url %>
+             (<%= number_to_human_size(@employer.attachment.size) %>)
+</p> </div>
+<% end %>
 <p>
   <strong>Name:</strong>
   <%= @employer.name %>
@@ -95,5 +105,6 @@
       #<%= offer.id %> -
       <%= link_to offer.name, [@employer, offer] %><br>
     </li>
-  <% end %>
+
 </ul>
+<% end %>
