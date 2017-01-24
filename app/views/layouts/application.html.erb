@@ -25,32 +25,22 @@
       <i class="fa fa-twitter"></i>
     </a>
 
-   <% unless user_signed_in? %>
-          <li class="<%= "active" if current_page?("/users/sign_up") %>">
+   <% unless user_signed_in? %><div class="signed-in">
+          <li class="<%= "active" if current_page?("/users/sign_up") %> ">
             <%= link_to "Sign up", new_user_registration_path %>
           </li>
           <li class="<%= "active" if current_page?("/users/sign_in") %>">
             <%= link_to "Sign in", new_user_session_path %>
-          </li>
+          </li></div>
         <% end %>
 
-          <% if user_signed_in? %>
-          <div class="navbar-right">
-            <p class="navbar-text">
-              Signed in as <%= current_user.email %>
-</p> </div>
-<% end %>
 
-  <% if user_signed_in? %>
-          <div class="navbar-right">
-            <p class="navbar-text">
+  <% if user_signed_in? %><div class="signed-in">
               Signed in as <%= current_user.email %>
-            </p>
-            <ul class="nav navbar-nav">
               <li><%= link_to "Sign out", destroy_user_session_path,
                 method: :delete %>
-</li> </ul>
-          </div>
+</li> </div>
+
         <% end %>
 
   </div>
@@ -144,7 +134,7 @@ Support and contact: <a href="mailto:community@internsgopro.com">community@inter
 <div id="author">
 <p>
 <a href="http://www.internsgopro.com" target="_blank">Web application by InternsGoPro</a>
-<a href="http://www.internsgopro.com" target="_blank"><br><img src="/pdf/internsgopro_terms-of-use.png" height="42" width="250"></a>
+<a href="http://www.internsgopro.com" target="_blank"><br><img src="/logo.png" height="42" width="250"></a>
 </p>
 </div>
 </div>

@@ -2,16 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.banner {
-  background-image: url(/girl.jpg);
-  position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  height: 500px;
-  top: 80px;
-  margin-bottom: 100px;
-}
+
 
 .banner-text {
   position: absolute;
@@ -21,4 +12,15 @@
   transform: translate(-50%, -50%);
   color: white;
   line-height: 26px;
+}
+
+.offer-pic {
+  background-image: url(/girl.jpg);
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 500px;
+
+  margin-bottom: 70px;
 }

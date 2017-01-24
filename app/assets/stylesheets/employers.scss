@@ -183,18 +183,16 @@ ul {
     float: left;
 }
 
-.employer-pic {
-  background-image: url("/girl.jpg");
-}
 
 .employer-pic {
-  background-image: url(/horses.png);
+  background-image: url(/girl.jpg);
   position: relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   height: 500px;
-  top: 80px;
+  margin-top: 48px; 
+
   margin-bottom: 70px;
 }
 
