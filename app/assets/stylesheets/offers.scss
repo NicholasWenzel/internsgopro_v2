@@ -24,3 +24,32 @@
 
   margin-bottom: 70px;
 }
+
+.banner-landing-page {
+  background-image: url(/route-page/banner-pic.jpg);
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 425px;
+  margin-top: 0px;
+
+  margin-bottom: 70px;
+}
+
+.banner-black {
+  background-color: black;
+  line-heigt: 46px;
+  font-weight: 200;
+  font-size: 46px;
+  color: white;
+  text-align: center;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 425px;
+  margin-top: 0px;
+
+  margin-bottom: 70px;
+}
