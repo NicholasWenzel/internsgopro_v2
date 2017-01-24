@@ -33,7 +33,7 @@ $light_grey: #d8dcde;
 
 
 .margin-top {
-  margin-top: 80px;
+  margin-top: 30px;
   position: relative;
 }
 
@@ -57,6 +57,15 @@ h2 {
     font-weight: 300;
     line-height: 30px;
     margin: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
 
 }
 
@@ -66,7 +75,7 @@ p {
   font-size: 14px;
   color: #666666;
   font-weight: 300;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
 
 }
 

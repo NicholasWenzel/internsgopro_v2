@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.guy-dark-pic {
+  background-image: url(/label-page/Guy-dark.jpg);
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 500px;
+  margin-top: 48px;
+
+  margin-bottom: 70px;
+}
 
 
 .banner-text {
@@ -61,7 +72,9 @@
   -moz-background-size: cover;
   background-size: cover;
   height: 425px;
-  margin-top: 0px;
+  padding-top: 40px;
+  padding-right: 130px;
+  padding-left: 130px;
 
   margin-bottom: 70px;
 }
