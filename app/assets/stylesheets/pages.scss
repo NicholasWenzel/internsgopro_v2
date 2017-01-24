@@ -1,0 +1,67 @@
+// Place all the styles related to the offers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.banner-text {
+  position: absolute;
+  font-size: 26px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  line-height: 26px;
+}
+
+.offer-pic {
+  background-image: url(/girl.jpg);
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 500px;
+
+  margin-bottom: 70px;
+}
+
+.banner-label-page {
+  background-image: url(/label-page/horses.png);
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 425px;
+  margin-top: 0px;
+
+  margin-bottom: 70px;
+}
+
+.banner-2-label-page {
+  background-image: url(/label-page/Microsoft.jpg);
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 425px;
+  margin-top: 0px;
+
+  margin-bottom: 70px;
+}
+
+.banner-black {
+  background-color: black;
+  line-heigt: 46px;
+  font-weight: 200;
+  font-size: 46px;
+  color: white;
+  text-align: center;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 425px;
+  margin-top: 0px;
+
+  margin-bottom: 70px;
+}
