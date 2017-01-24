@@ -191,11 +191,22 @@ ul {
   -moz-background-size: cover;
   background-size: cover;
   height: 500px;
-  margin-top: 48px; 
+  margin-top: 48px;
 
   margin-bottom: 70px;
 }
 
 .container.employer-list {
   padding: 0px;
+}
+
+.employer-profile-div {
+  text-align: justify;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  border: solid #FFBD23 1px;
+  display: block;
+  color: #333;
+  font-size: 14px;
+  border-radius: 10px;
 }

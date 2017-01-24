@@ -1,6 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<div style="margin-top: 150px;">
+<div style="margin-top: 150px;"></div>
+
+<h2><%= @employer.name %></h2>
+<div class="row">
+  <div class="col-md-12">
+  <%= image_tag (@employer.attachment.url) %>
+  </div>
+</div>
+
+<div class="row block">
+  <div class="col-md-12" style="padding-left:0; margin-left:0;">
+      <h2><%= @employer.descr0_title %></h2>
+      <div class="employer-profile-div">
+      <%= @employer.descr0_full %>
+    </div>
+  </div>
+</div>
+
+<div class="row block">
+  <div class="col-md-6">
+    <h2><%= @employer.descr1_title %></h2>
+      <div class="employer-profile-div">
+        <%= @employer.descr1_full %>
+      </div>
+    </div>
+  <div class="col-md-6">
+    <h2><%= @employer.descr2_title %></h2>
+      <div class="employer-profile-div">
+        <%= @employer.descr2_full %>
+  </div>
+</div>
+
+
+
+
 
 
 <p>
@@ -43,25 +77,6 @@
   <%= @employer.video %>
 </p>
 
-<p>
-  <strong>Descr0 title:</strong>
-  <%= @employer.descr0_title %>
-</p>
-
-<p>
-  <strong>Descr0 full:</strong>
-  <%= @employer.descr0_full %>
-</p>
-
-<p>
-  <strong>Descr1 title:</strong>
-  <%= @employer.descr1_title %>
-</p>
-
-<p>
-  <strong>Descr1 full:</strong>
-  <%= @employer.descr1_full %>
-</p>
 
 <p>
   <strong>Descr2 title:</strong>
@@ -110,3 +125,4 @@
            (<%= number_to_human_size(@employer.attachment.size) %>)
 </p> </div>
 <% end %>
+</div>
