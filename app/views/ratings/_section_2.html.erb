@@ -1,0 +1,89 @@
+<!-- Section 2 -->
+<div id="section_2" class="rating_section hidden">
+  <!-- These are the breadcrumbs for section 2 -->
+  <!-- orbs desktop -->
+  <div class="orbs-desktop">
+    <div id="section_2_status" class="orbs_container">
+      <a href="#" class="section_switch_button" data-target="#section_1">
+        <div class="orb orb-check">
+          <i class="fa fa-check"></i>
+        </div>
+      </a>
+      <div class="connecting_line"></div>
+      <div class="orb orb-step-2">
+        2
+      </div>
+    </div>
+    <div class="description-breadcrumbs">
+      <p>
+        GENERAL
+      </p>
+      <p>
+        DETAILS
+      </p>
+    </div>
+  </div>
+
+  <!-- orbs mobile -->
+  <div class="orbs-mobile">
+    <div id="section_2_status" class="orbs_container">
+      <div class="orb orb-check">
+        <a href="#" class="section_switch_button" data-target="#section_1">
+          <i class="fa fa-check"></i>
+        </a>
+      </div>
+      <p>
+        GENERAL
+      </p>
+      <div class="orb orb-step-2">
+        2
+      </div>
+      <p>
+        DETAILS
+      </p>
+    </div>
+  </div>
+
+
+  <div class="header-section-2">
+    <div class="icon-main">
+    </div>
+    <div class="text-main-header">
+     <h3>
+      Tell us more about your internship
+      <span class="star-information-popover-link">
+       <i class="fa fa-info-circle" data-target="#information-text-section-1"></i>
+     </span>
+   </h3>
+   <p>
+    It's anonymous and you'll be helping other job seekers
+  </p>
+  <div id="information-text-section-1" class="star-information-popover">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora, ipsam aperiam distinctio ex facere repellendus, reiciendis alias laboriosam consectetur.
+  </div>
+</div>
+</div>
+<%= render partial: "internship_job_info", locals: { f: f } %>
+<%= render partial: "internship_year", locals: { f: f } %>
+<%= render partial: "internship_duration", locals: { f: f } %>
+<%= render partial: "internship_earning", locals: { f: f } %>
+<%= render partial: "internship_extra_benefits", locals: { f: f } %>
+<%= render partial: "internship_status", locals: { f: f } %>
+<%= render partial: "internship_contract_job_offer", locals: { f: f } %>
+
+
+
+
+<div class="comments-conditions">
+  <%= f.input :additional_comments, placeholder: 'How would you like to describe your internship?', label: false, input_html: {class: "comment-box"} %>
+  <%= f.input :read_conditions, as: :boolean, inline_label: 'I certify that this rating is based on my own professional experience and is my genuine opinion of this organisation. I understand that InternsGoPro has a zero-tolerance policy on fake ratings.' %>
+</div>
+<hr>
+
+<!-- END FORM w/ login etc-->
+<%= render partial: "internship_form_end", locals: { f: f } %>
+
+<%= f.submit "You're done", id: "submit_rating", class: "btn btn-green btn-right" %>
+
+</div>
+

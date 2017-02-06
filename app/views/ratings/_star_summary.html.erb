@@ -1,0 +1,15 @@
+<!-- This partial gets called in summary.html.erb -->
+<div class="star_and_name_values">
+  <div class="name-star-value">
+  <p><b><%= name_value %></b></p>
+  </div>
+  <div class="star_value">
+    <% score_value.times do %>
+    <!-- FIX ME replace w/ icons from designer -->
+    <i class="fa fa-star", style="color: #ffbd23;"></i>
+    <% end %>
+    <% (5 - score_value).times do %>
+    <i class="fa fa-star", style="color: #d1d1d1;"></i>
+    <% end %>
+  </div>
+</div>

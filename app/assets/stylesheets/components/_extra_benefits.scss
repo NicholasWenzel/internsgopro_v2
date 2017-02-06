@@ -1,0 +1,120 @@
+.extra_benefits_label {
+  color: #4c4a4e;
+  transition: color 200ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin-top: 5px;
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #8b8c8f;
+    width: 120px;
+    text-align: center;
+  }
+  input {
+    display: none;
+    &:checked ~ p {
+      color: #ffbd23;
+    }
+  }
+  &:hover p {
+    color: #ffbd23;
+  }
+}
+
+.extra_benefits_check_boxes {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  border-radius: 6px;
+  border: solid 1px #e0e5ec;
+  overflow: hidden;
+  .extra_benefit_hover {
+    border: 2px solid #ffbd23 !important;
+  }
+  .check_boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    border: 2px solid white;
+    transition: border 200ms ease;
+    span {
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      border: 2px solid #ffbd23 !important;
+    }
+    &:nth-child(2) {
+      border-left: 2px solid #e0e5ec;
+    }
+    &:nth-child(3) {
+      border-left: 2px solid #e0e5ec;
+    }
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+
+    }
+    &:last-child {
+      border-left: 2px solid #e0e5ec;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
+}
+
+.image_extra_benefit_meal_voucher {
+  background-image: image-url("png_@2x/icon_meal_voucher_disabled@2x.png.png");
+  background-size: cover;
+  transition: background-image 200ms ease;
+  width: 32.3px;
+  height: 24.5px;
+  will-change: background-image;
+}
+.extra_benefits_label:hover .image_extra_benefit_meal_voucher, .extra_benefits_label input:checked ~ .image_extra_benefit_meal_voucher {
+  background-image: image-url("png_@2x/icon_meal_voucher_enabled@2x.png.png");
+}
+
+.image_extra_benefit_transport {
+  background-image: image-url("png_@2x/icon_transport_costs_disabled@2x.png.png");
+  background-size: cover;
+  transition: background-image 200ms ease;
+  width: 56px;
+  height: 25px;
+  will-change: background-image;
+}
+.extra_benefits_label:hover .image_extra_benefit_transport, .extra_benefits_label input:checked ~ .image_extra_benefit_transport {
+  height: 24px;
+  background-image: image-url("png_@2x/icon_transport_costs_enabled@2x.png.png");
+}
+
+.image_extra_benefit_insurance {
+  background-image: image-url("png_@2x/icon_insurance_disabled@2x.png.png");
+  background-size: cover;
+  transition: background-image 200ms ease;
+  width: 27.9px;
+  height: 24.9px;
+  will-change: background-image;
+}
+.extra_benefits_label:hover .image_extra_benefit_insurance, .extra_benefits_label input:checked ~ .image_extra_benefit_insurance {
+  background-image: image-url("png_@2x/icon_insurance_enabled@2x.png.png");
+}
+
+.image_extra_benefit_accomodation {
+  background-image: image-url("png_@2x/icon_accomodation_disabled@2x.png.png");
+  background-size: cover;
+  transition: background-image 200ms ease;
+  width: 38px;
+  height: 27.9px;
+  will-change: background-image;
+}
+.extra_benefits_label:hover .image_extra_benefit_accomodation, .extra_benefits_label input:checked ~ .image_extra_benefit_accomodation {
+  background-image: image-url("png_@2x/icon_accomodation_enabled@2x.png.png");
+}

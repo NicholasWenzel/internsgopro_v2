@@ -15,6 +15,15 @@ end
   resources :offers
   resources :places
   resources :pages
+
+  resources :ratings do
+    member do
+      # creates the route for step three, summary of what the user filled in
+      get :summary
+    end
+  end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 get 'offers' => 'offers#index'
