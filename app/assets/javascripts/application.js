@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require rating_form
+//= require rating_stars
+
 
 jQuery(document).ready(function($) {
     $(".clickable-row").click(function() {

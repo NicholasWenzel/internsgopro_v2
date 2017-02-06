@@ -1,0 +1,23 @@
+.dropdown-button-container {
+  position: relative;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 52px;
+  border-left: 1px solid #e0e5ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .arrow {
+   width: 0;
+   height: 0;
+   border-left: 5px solid transparent;
+   border-right: 5px solid transparent;
+
+   border-top: 5px solid #ffbd23;
+ }
+}

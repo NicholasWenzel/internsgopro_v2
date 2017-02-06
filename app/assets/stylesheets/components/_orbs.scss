@@ -1,0 +1,108 @@
+// Orbs for desktop
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  .orbs_container {
+    margin-top: 100px;
+    margin: 20px auto;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  .connecting_line {
+    flex: 1 0 auto;
+    border-bottom: solid 2px #74b05d;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+.orb {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.description-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  p {
+    color: #bdbdbd;
+    line-height: 1.5;
+    margin: 0px 5px;
+  }
+}
+.orbs-mobile {
+    display: none;
+  }
+}
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait)  {
+
+  .orbs_container {
+    margin: 20px auto;
+    width: 180px;
+    display: flex;
+    align-items: center;
+  a {
+    text-decoration: none;
+    color: #bdbdbd;
+  }
+    p {
+    margin: 4px;
+    font-size: 11px;
+  }
+}
+.orb {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+}
+
+// .description-breadcrumbs {
+//   display: flex;
+//   justify-content: center;
+//   p {
+//     color: #bdbdbd;
+//     line-height: 1.5;
+//     margin: 0px 5px;
+//   }
+// }
+.orbs-desktop {
+    display: none;
+  }
+}
+
+
+// Colours for the orbs are dependend on the values set in _variables.scss
+
+.orb-step-1 {
+  color: white;
+  background-color: #74b05d;
+}
+
+.orb-step-2 {
+  color: #74b05d;
+  background-color: #f6f8fa;
+  border: 2px solid #74b05d;
+}
+
+.orb-check {
+  background-color: #74b05d;
+  color: #d8f597;
+}
+

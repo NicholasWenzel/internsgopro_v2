@@ -1,0 +1,76 @@
+@media screen
+and (min-device-width: 1200px)
+and (max-device-width: 1600px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  .rating_internship_start_year {
+    height: 70px;
+    width: 380px;
+  }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  .rating_internship_start_year {
+   height: 50px;
+   width: 286px;
+ }
+}
+
+
+.rating_internship_start_year {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  border-radius: 6px;
+  border: solid 1px #e0e5ec;
+  overflow: hidden;
+  .radio {
+    margin: 0;
+  }
+  span {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    .internship-start-year-hover {
+      border: 2px solid #ffbd23;
+      color: #ffbd23;
+      font-weight: 600;
+    }
+    label {
+      color: #8b8c8f;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid white;
+      font-weight: 400;
+      transition: all 200ms ease;
+      &:hover {
+        border: 2px solid #ffbd23;
+        color: #ffbd23;
+        font-weight: 600;
+      }
+      input {
+        display: none;
+      }
+    }
+    &:first-child label {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+    &:last-child label {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+      border-left: 2px solid #e0e5ec;
+    }
+  }
+}

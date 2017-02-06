@@ -1,0 +1,269 @@
+// General css for whole summary
+.top-summary-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  .thumbs-up-icon {
+    background-image: image-url("png_@1x/icon_thankyou@1x.png.png");
+    width: 34px;
+    height: 34px;
+    margin-right: 8px
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 1.67;
+    color: #333333;
+  }
+}
+
+.summary-page {
+  // height: 709px;
+  // TMP HEIGHT:
+  height: 500px;
+  margin-top: 49px;
+  background-color: #f6f8fa;
+}
+
+#summary {
+  max-width: 700px;
+  // height: 690px;
+  // TMP height:
+  height: 490px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: solid 1px #e0e5ec;
+  margin-top: 25px;
+}
+
+.summary_section {
+  margin: 0 auto;
+}
+
+// CSS for top part summary
+.summary-headline {
+  text-align: center;
+  h4 {
+    color: #9C9E9F;
+  }
+  .circle{
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 65px;
+    // TMP border
+    border: solid 12px #e95e50;
+    display:inline-block;
+    margin: 20px;
+    p {
+      color: #333333;
+      font-weight: bold;
+      font-size: 25px;
+      margin-top: 30px;
+    }
+  }
+  .outcome-review {
+    h4 {
+      font-size: 26px;
+      line-height: 1.15;
+      color: #333333;
+    }
+    p {
+      color: #333333;
+      font-size: 15px;
+      line-height: 2;
+    }
+  }
+}
+// CSS for stars part summary
+.stars-summary {
+  margin-top: 35px;
+  margin-left: 90px;
+  margin-right: 90px;
+  margin-bottom: 20px;
+  display: flex;
+  // for mobile
+  //display: flex;
+    // flex-direction: column;
+    .stars-left {
+      margin-right: 90px;
+    }
+    .star-coloring-summary {
+      width: 240px
+    }
+  }
+
+
+  .star_and_name_values {
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: #4c4a4e;
+      font-size: 16px;
+    }
+  }
+
+  .share_and_newsletter-container {
+    width: 100%;
+    padding: 17px;
+    display: flex;
+    p {
+      color: #4c4a4e;
+      text-align: center;
+      font-size: 14px;
+    }
+    .title-share-card {
+      margin-top: 15px;
+      .airplane-icon {
+        background-image: image-url("png_@1x/icon_trip@1x.png");
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .card-summary {
+      margin: 25px;
+      width: 300px;
+      height: 201.4px;
+      border-radius: 4px;
+      background-color: #f6f8fa;
+      border: solid 1px #efefef;
+    }
+    .share-field {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .facebook-share-button {
+      border-radius: 4px;
+      background-color: #3b5998;
+      border: solid 1px #3b5998;
+      max-height: 40px;
+      width: 180px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      color: #ffffff;
+      .fafa-icon-share {
+        margin: 7px;
+      }
+      p {
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+    .twitter-share-button {
+      border-radius: 4px;
+      background-color: #1da1f2;
+      border: solid 1px #1da1f2;
+      max-height: 40px;
+      width: 180px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      color: #ffffff;
+      .fafa-icon-share {
+        margin: 7px;
+      }
+      p {
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px
+      }
+
+    }
+  }
+
+  .intern-opportunities {
+    height: 250px;
+    width: 710px;
+    margin-left: 366px;
+    .title-int-opportunities {
+      font-size: 14px;
+      margin-top: 20px;
+      margin-left: 7px;
+      line-height: 1.31;
+      color: #4c4a4e;
+    }
+    .location {
+      font-size: 14px;
+    }
+    .logo-micro {
+      background-image: image-url("rsz_microsoft_logo.png");
+      width: 105px;
+      height: 32px;
+      margin-left: 26px;
+      margin-bottom: 16px;
+    }
+    .logo-uniplaces {
+      background-image: image-url("rsz_1uniplaces_logo.png");
+      width: 105px;
+      height: 32px;
+    }
+    .tags-icons {
+      background-image: image-url("rsz_advanced.png");
+      width: 40px;
+      height: 19px;
+
+    }
+    .opportunity-card {
+     width: 180px;
+     height: 160px;
+     border-radius: 8px;
+     background-color: #ffffff;
+     border: solid 1px #f3f3f3;
+     margin: 16px 10px;
+     display: flex;
+     justify-content: center;
+     flex-direction: column;
+     text-align: center;
+     .title-internship {
+      font-size: 16px;
+
+    }
+    .tag {
+      font-size: 10px;
+      width: 55px;
+      border-radius: 5px;
+      margin-left: 50px;
+      margin-top: 15px;
+      color: white;
+    }
+    .tag-champion {
+      background-color: #F93C3C;
+      border: solid 1px #F93C3C;
+    }
+    .tag-advanced {
+      background-color: #FFB215;
+      border: solid 1px #FFB215;
+    }
+  }
+}
+
+// TMP:
+.certified-internships {
+    // TMP:
+    margin-top: 150px;
+  }
+//
+.link-button {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.button-container-summary{
+  width: 740px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cards-certified-internships {
+  display: flex;
+  justify-content: center;
+}

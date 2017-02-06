@@ -1,0 +1,45 @@
+<div class="rating-stars-item">
+  <h4>
+    <!-- Shows the label for each checkbox/star -->
+    <%= display_text %>
+  </h4>
+
+  <% if @rating_error && (params[:rating][field_value] != "") %>
+    <% selected_value = params[:rating][field_value].to_i %>
+    <% star_error_message = false %>
+  <% elsif @rating_error == false %>
+    <% star_error_message = false %>
+  <% else %>
+    <% selected_value = 0 %>
+    <% star_error_message = true %>
+  <% end %>
+
+  <div class="form-group radio_buttons required rating_<%= field_value %>" data-target="#<%= field_value %>_star_error_message" id="<%= field_value %>">
+    <input type="hidden" name="rating[<%= field_value %>]" id="selected_value" value="" data-value="<%= selected_value %>">
+    <% (1..5).to_a.each_with_index do |number, index| %>
+    <span class="radio star_rating_select">
+      <label for="rating_<%= field_value %>_<%= number %>" id="<%= number %>" class="star-rating-display" data-target=".rating_<%= field_value %>">
+        <input class="radio_buttons required" type="radio" value=<%= number %> name="rating[<%= field_value %>]" id="rating_<%= field_value %>_<%= number %>">
+         <!-- # FIX ME: replace ! with icon handed by agency -->
+        <i class="fa fa-star fa-2x"></i>
+      </label>
+    </span>
+    <% end %>
+  </div>
+  <% if star_error_message %>
+  <div class="star_error_message" id="<%= field_value %>_star_error_message">
+    <p>
+    <!-- # FIX ME: replace ! with icon handed by agency -->
+      <span>
+      !
+      </span>
+      Please fill in this rating
+    </p>
+  </div>
+  <% end %>
+
+</div>
+
+
+
+
