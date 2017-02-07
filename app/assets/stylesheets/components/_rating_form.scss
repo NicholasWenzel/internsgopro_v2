@@ -366,6 +366,9 @@ and (orientation: portrait) {
   height: 105px;
   justify-content: space-between;
   align-items: flex-start;
+  h4 {
+    color: #5B585D;
+  }
 }
 
 .section-2-yes-no {
