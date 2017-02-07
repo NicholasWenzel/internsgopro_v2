@@ -7,6 +7,9 @@ class PlacesController < ApplicationController
 
 
   private
+
   def set_project
     @employer = Employer.find(params[:project_id])
   end
+
+end
