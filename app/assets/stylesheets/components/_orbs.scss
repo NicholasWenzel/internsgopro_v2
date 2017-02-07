@@ -5,7 +5,7 @@
   and (-webkit-min-device-pixel-ratio: 1) {
 
   .orbs_container {
-    margin-top: 100px;
+    margin-top: 63px;
     margin: 20px auto;
     width: 140px;
     display: flex;
@@ -14,7 +14,7 @@
 
   .connecting_line {
     flex: 1 0 auto;
-    border-bottom: solid 2px #74b05d;
+    border-bottom: solid 2px #5CB85C;
   }
   a {
     text-decoration: none;
@@ -35,7 +35,7 @@
   p {
     color: #bdbdbd;
     line-height: 1.5;
-    margin: 0px 5px;
+    margin: 0px 15px;
   }
 }
 .orbs-mobile {
@@ -50,6 +50,7 @@
   and (orientation: portrait)  {
 
   .orbs_container {
+    margin-top: 25px;
     margin: 20px auto;
     width: 180px;
     display: flex;
@@ -73,15 +74,6 @@
 
 }
 
-// .description-breadcrumbs {
-//   display: flex;
-//   justify-content: center;
-//   p {
-//     color: #bdbdbd;
-//     line-height: 1.5;
-//     margin: 0px 5px;
-//   }
-// }
 .orbs-desktop {
     display: none;
   }
@@ -92,17 +84,17 @@
 
 .orb-step-1 {
   color: white;
-  background-color: #74b05d;
+  background-color: #5CB85C;
 }
 
 .orb-step-2 {
   color: #74b05d;
   background-color: #f6f8fa;
-  border: 2px solid #74b05d;
+  border: 2px solid #5CB85C;
 }
 
 .orb-check {
-  background-color: #74b05d;
+  background-color: #5CB85C;
   color: #d8f597;
 }
 

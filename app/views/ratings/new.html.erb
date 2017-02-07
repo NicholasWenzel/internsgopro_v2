@@ -2,11 +2,11 @@
 <!-- components/_rating_form.scss -->
 <!-- components/_orbs.scss -->
 <div class="body-rating">
-<%= simple_form_for @rating do |f| %>
-<div class="container">
-  <%= render partial: "section_1", locals: { f: f} %>
+  <%= simple_form_for @rating do |f| %>
+  <div class="container">
+    <%= render partial: "section_1", locals: { f: f} %>
 
-  <%= render partial: "section_2", locals: { f: f} %>
-</div>
-<% end %>
+    <%= render partial: "section_2", locals: { f: f} %>
+  </div>
+  <% end %>
 </div>

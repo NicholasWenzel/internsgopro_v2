@@ -52,7 +52,7 @@
      <h3>
       Tell us more about your internship
       <span class="star-information-popover-link">
-       <i class="fa fa-info-circle" data-target="#information-text-section-1"></i>
+        <div class="information-button" data-target="#information-text-section-1"></div>
      </span>
    </h3>
    <p>
@@ -76,14 +76,14 @@
 
 <div class="comments-conditions">
   <%= f.input :additional_comments, placeholder: 'How would you like to describe your internship?', label: false, input_html: {class: "comment-box"} %>
-  <%= f.input :read_conditions, as: :boolean, inline_label: 'I certify that this rating is based on my own professional experience and is my genuine opinion of this organisation. I understand that InternsGoPro has a zero-tolerance policy on fake ratings.' %>
+  <%= f.input :read_conditions, as: :boolean, inline_label: 'I certify that this rating is based on my own professional experience and is genuine opinion of this organisation.I understand that InternsGoPro has a zero-tolerance policy on fake ratings.' %>
 </div>
 <hr>
 
 <!-- END FORM w/ login etc-->
 <%= render partial: "internship_form_end", locals: { f: f } %>
 
-<%= f.submit "You're done", id: "submit_rating", class: "btn btn-green btn-right" %>
+<%= f.submit "You're done!", id: "submit_rating", class: "btn btn-green btn-right" %>
 
 </div>
 

@@ -1,13 +1,16 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  // Had to comment this out because it is interfering with the css
+  // If you want to use both, you need to load it once through google fonts
+  // font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  // Had to comment this out because it is interfering with the css
+  // font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -18,18 +21,19 @@ pre {
   font-size: 11px;
 }
 
-a {
-  color: #000;
+// Same thing here, this creates a black blox on every link
+// not just specified links
+// a {
+//   color: #000;
+//   &:visited {
+//     color: #666;
+//   }
 
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
 
 div {
   &.field, &.actions {
