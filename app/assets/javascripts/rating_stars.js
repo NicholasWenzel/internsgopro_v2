@@ -101,7 +101,7 @@ $('.star-information-popover-link').hover(function(){
   });
 },
 function(){
-  var popoverLocation = $('i', this).data('target');
+  var popoverLocation = $('div', this).data('target');
   $(popoverLocation).delay(200).slideUp( "fast", function() {
     $(popoverLocation).css('display', 'none');
   });
