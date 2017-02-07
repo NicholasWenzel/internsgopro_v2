@@ -95,7 +95,7 @@ function starColor(starSelected, starPermanence){
 // FUNCTION TO ACTIVATE THE POPOVER PER STAR ITEM
 
 $('.star-information-popover-link').hover(function(){
-  var popoverLocation = $('i', this).data('target');
+  var popoverLocation = $('div', this).data('target');
   $(popoverLocation).slideDown( "fast", function() {
     $(popoverLocation).css('display', 'block');
   });
