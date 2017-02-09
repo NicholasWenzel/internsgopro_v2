@@ -1,4 +1,4 @@
 <h4 class="sub-header">
   Net Salary/Month(€)
 </h4>
-<%= f.input :net_salary_per_month, label: false, as: :radio_buttons, collection: ["Not paid", "Less than 200€", "Less than 500€", "Less than 700€", "Less than 1000€", "More than 1000€"] %>
+<%= f.input :net_salary_per_month, label: false, as: :radio_buttons, collection: ["Not paid", "Less than 200€", "Less than 500€", "Less than 700€", "Less than 1000€", "More than 1000€"], wrapper_html: { class: "append-error-message-salary" }  %>

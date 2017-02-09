@@ -76,7 +76,7 @@
 
 <div class="comments-conditions">
   <%= f.input :additional_comments, placeholder: 'How would you like to describe your internship?', label: false, input_html: {class: "comment-box"} %>
-  <%= f.input :read_conditions, as: :boolean, inline_label: 'I certify that this rating is based on my own professional experience and is genuine opinion of this organisation.I understand that InternsGoPro has a zero-tolerance policy on fake ratings.' %>
+  <%= f.input :read_conditions, as: :boolean, inline_label: 'I certify that this rating is based on my own professional experience and is genuine opinion of this organisation.I understand that InternsGoPro has a zero-tolerance policy on fake ratings.', wrapper_html: {class: "append-error-message-conditions"} %>
 </div>
 <hr>
 

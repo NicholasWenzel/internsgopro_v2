@@ -20,7 +20,6 @@
     <span class="radio star_rating_select">
       <label for="rating_<%= field_value %>_<%= number %>" id="<%= number %>" class="star-rating-display" data-target=".rating_<%= field_value %>">
         <input class="radio_buttons required" type="radio" value=<%= number %> name="rating[<%= field_value %>]" id="rating_<%= field_value %>_<%= number %>">
-         <!-- # FIX ME: replace ! with icon handed by agency -->
         <i class="fa fa-star fa-2x"></i>
       </label>
     </span>
@@ -29,7 +28,6 @@
   <% if star_error_message %>
   <div class="star_error_message" id="<%= field_value %>_star_error_message">
     <p>
-    <!-- # FIX ME: replace ! with icon handed by agency -->
       <span>
       !
       </span>

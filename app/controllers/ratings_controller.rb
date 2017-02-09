@@ -21,6 +21,7 @@ class RatingsController < ApplicationController
     else
       @rating_error = true
       render 'new'
+      # raise
     end
   end
 
@@ -95,7 +96,6 @@ class RatingsController < ApplicationController
   end
 
   def create_statement_summary
-    # FIX ME: check the scores and appropriate statements
     if @score >= 4 && @score <= 5
       @glad_to_hear = "We are glad to hear you had a"
       @good_bad_statement = "Good Internship!"

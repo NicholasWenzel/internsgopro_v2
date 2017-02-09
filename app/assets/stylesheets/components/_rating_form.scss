@@ -346,17 +346,31 @@ and (orientation: portrait) {
 
 // CSS for the error messages on section 1
 .star_error_message {
-  color: #EE5F5B;
+  color: #E20606;
   span {
     font-weight: bold;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #EE5F5B;
+    border: 2px solid #E20606;
     display: inline-flex;
     justify-content: center;
     align-items: center;
   }
+}
+.error-message-section-2{
+  color: #d0021b;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.exclamationmark {
+  background-image: image-url('png_@1x/error_message@1x.png');
+  width: 13px;
+  height: 13px;
+  float: left;
+  margin-right: 3px;
 }
 
 // Css for the yes/no fields
