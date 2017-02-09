@@ -21,7 +21,6 @@ class RatingsController < ApplicationController
     else
       @rating_error = true
       render 'new'
-      # raise
     end
   end
 
@@ -53,7 +52,6 @@ class RatingsController < ApplicationController
   private
 
   def set_star_fields
-    # rating_recommendation: "Would you recommend your internship?",
     @star_fields = {
       rating_goals: "Clarity of Learning Objectives",
       rating_objectives: "Learning objectives were respected",
