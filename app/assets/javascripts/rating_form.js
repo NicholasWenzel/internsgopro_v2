@@ -128,8 +128,6 @@ $('.section_switch_button').on('click', function(event) {
   if ($(this).hasClass('ready')) {
     var target = $(this).data('target');
     $('.rating_section').addClass('hidden');
-    // Hides section one when pressed
-    // console.log('I am hiding section 1!');
     $(target).removeClass('hidden');
   }
   else {
