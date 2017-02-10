@@ -15,23 +15,27 @@
   </div>
   <div class="titles-section-2">
   <!-- TMP: -->
-  <h4>Please sign up with your name and email</h4>
-    <!-- <h4>Please choose 1 option</h4> -->
+  <!-- <h4>Please sign up with your name and email</h4> -->
+    <h4>Please choose 1 option</h4>
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-6">
       <div class="user-creation">
-        <%= f.input :reviewer_name, label: false, placeholder: "Your full name", input_html: { class: "rating-form-fields" }%>
+        <%= f.input :reviewer_name, label: false, placeholder: "Your full name", input_html: { class: "rating-form-fields check-string-section-2 render-error-message" }%>
       </div>
     </div>
     <div class="col-xs-12 col-md-6">
       <div class="user-creation">
-        <%= f.input :reviewer_email, label: false, placeholder: "Your emailaddress", input_html: { class: "rating-form-fields" } %>
+        <%= f.input :reviewer_email, label: false, placeholder: "Your emailaddress", input_html: { class: "rating-form-fields check-string-section-2 render-error-message" } %>
       </div>
     </div>
   </div>
-  <hr>
-<!--   <div class="row">
+  <div class="divider-center">
+  <div style="width: 430px; height: 15px; border-bottom: solid 1px #e0e5ec; text-align: center">
+      <span style="font-size: 18px; background-color: #F6F8FA; padding: 0 10px; color: #4c4a4e; ">  or  </span>
+    </div>
+    </div>
+  <div class="row">
     <div class="signin-fb-linkedin">
       <div class="col-xs-12 col-md-6">
         <div class="or-end-form">or</div>
@@ -56,4 +60,4 @@
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
