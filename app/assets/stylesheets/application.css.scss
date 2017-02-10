@@ -53,17 +53,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-// h2 {
-//     text-align: center;
-//     color: $orange;
-//     font-size: 30px;
-//     font-weight: 300;
-//     line-height: 30px;
-//     margin: 0;
-//     margin-top: 30px;
-//     margin-bottom: 10px;
+.title-class {
+    text-align: center;
+     color: $orange;
+     font-size: 30px;
+     font-weight: 300;
+     line-height: 30px;
+     margin: 0;
+     margin-top: 30px;
+     margin-bottom: 10px;
 
-// }
+ }
 
 img {
     display: block;
@@ -72,15 +72,15 @@ img {
 
 }
 
-// p {
-//   line-height: 23.8px;
-//   text-align: center;
-//   font-size: 14px;
-//   color: #666666;
-//   font-weight: 300;
-//   padding-bottom: 30px;
+.paragraph {
+    line-height: 23.8px;
+   text-align: center;
+   font-size: 14px;
+   color: #666666;
+   font-weight: 300;
+   padding-bottom: 30px;
 
-// }
+ }
 
 a {
   color: #666;

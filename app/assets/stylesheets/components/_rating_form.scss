@@ -375,6 +375,7 @@ and (orientation: portrait) {
 
 // Css for the yes/no fields
 .yes-no-field {
+  padding-left: 28px;
   display: flex;
   flex-direction: column;
   height: 105px;
@@ -383,6 +384,10 @@ and (orientation: portrait) {
   h4 {
     color: #5B585D;
   }
+}
+
+.yes-no-padding {
+  padding-left: 10.1px;
 }
 
 .section-2-yes-no {
