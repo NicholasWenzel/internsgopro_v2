@@ -1,0 +1,130 @@
+.yellow-navbar {
+  font-size: 12px;
+  line-height: 13px;
+  background-color: $orange;
+  color: rgba( 0, 0, 0, 0.5 );
+  a {
+    color: rgba( 0, 0, 0, 0.5 );
+    text-decoration: none;
+  }
+  .social-actions {
+    padding-left: 83.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 33px;
+    width: 320px;
+    .social {
+      font-size: 14px;
+    }
+  }
+  .login-actions-container {
+    padding-right: 83.5px;
+    width: 100%; 
+    display: flex;
+    justify-content: flex-end;
+    .login-actions {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      align-items: center;
+      height: 33px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .white-navbar {
+    padding: 10px 98.5px 0 98.5px;
+    .logo {
+      max-height: 30px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .white-navbar {
+    padding: 10px;
+    .logo {
+      max-height: 40px;
+    }
+  }
+}
+
+.white-navbar {
+  background: white;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  button {
+    background: white;
+    border-radius: 3px;
+    padding: 3px 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: rgba(1,1,1,0.3);
+    border: 1px solid rgba(1,1,1,0.3);
+  }
+  .actions {
+    width: 650px;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 500;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      position: relative;
+      color: #666666;
+      transition: color 200ms ease;
+      &:hover {
+        text-decoration: none;
+        color: #333;
+      }
+    }
+    .action-item {
+      position: relative;
+      a {
+        display: inline-block;
+      }
+      .nav-dropdown {
+        left: -100px;
+        width: 250px;
+        position: absolute;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        display: none;
+        background: white;
+        padding: 20px;
+        border-top: 3px solid #2EA3F2;
+        &:hover {
+          display: flex;
+        }
+        a {
+          padding: 20px;
+          &:hover {
+            background-color: rgba(0,0,0,0.03);
+          }
+        }
+        &:hover .nav-dropdown {
+          display: flex;
+        }
+      }
+    }
+    .chevron {
+      &:hover ~ .nav-dropdown {
+        display: flex;
+      }
+      &:after {
+        transform: rotate(90deg);
+        content: ' >\0000a0';
+        font-size: 9px;
+        position: absolute;
+        right: -17px;
+        top: 2px;
+      }
+    }
+  }
+}

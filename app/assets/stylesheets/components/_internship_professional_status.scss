@@ -1,110 +1,216 @@
-.rating_professional_status {
-  display: flex;
-  justify-content: space-around;
-  background: white;
-  border-radius: 6px;
-  border: solid 1px #e0e5ec;
-  overflow: hidden;
-  height: 70px;
-  .radio {
-    margin: 0;
-  }
-  span {
-    flex: 1 0 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    .internship-professional-status-hover {
-      border: 2px solid #ffbd23;
-      color: #ffbd23;
-    }
-    label {
-      flex-direction: column;
-      text-align: center;
-      color: #8b8c8f;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      border: 2px solid white;
-      font-weight: 400;
-      transition: all 200ms ease;
-      &:hover {
-        border: 2px solid #ffbd23;
-        color: #ffbd23;
-      }
-      input {
-        display: none;
-      }
-    }
-    &:first-child label {
-      border-top-left-radius: 6px;
-      border-bottom-left-radius: 6px;
-    }
-    &:last-child label {
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
-    }
-    &:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7) {
-      border-left: 2px solid #e0e5ec;
-    }
-  }
-  #rating_professional_status_student ~ .professional-status-image {
-    background-size: cover;
-    background-image: image-url("png_@2x/icon_student_disabled@2x.png.png");
-    width: 38.4px;
-    height: 27px;
-    &:hover {
-      background-image: image-url("png_@2x/icon_student_enabled@2x.png.png");
-    }
-  }
+// @media (min-width: 768px) {
+//   .rating_professional_status {
+//     display: flex;
+//     justify-content: space-around;
+//     background: white;
+//     border-radius: 6px;
+//     border: solid 1px #e0e5ec;
+//     overflow: hidden;
+//     height: 70px;
+//     .radio {
+//       margin: 0;
+//     }
+//     span {
+//       flex: 1 0 25%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       height: 100%;
+//       .internship-professional-status-hover {
+//         border: 2px solid #ffbd23;
+//         color: #ffbd23;
+//       }
+//       label {
+//         flex-direction: column;
+//         text-align: center;
+//         color: #8b8c8f;
+//         padding: 0;
+//         height: 100%;
+//         width: 100%;
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
+//         border: 2px solid white;
+//         font-weight: 400;
+//         transition: all 200ms ease;
+//         &:hover {
+//           border: 2px solid #ffbd23;
+//           color: #ffbd23;
+//         }
+//         input {
+//           display: none;
+//         }
+//       }
+//       &:first-child label {
+//         border-top-left-radius: 6px;
+//         border-bottom-left-radius: 6px;
+//       }
+//       &:last-child label {
+//         border-top-right-radius: 6px;
+//         border-bottom-right-radius: 6px;
+//       }
+//       &:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6),&:nth-child(7) {
+//         border-left: 2px solid #e0e5ec;
+//       }
+//     }
 
-  #rating_professional_status_student:hover ~ .professional-status-image, #rating_professional_status_student:checked ~ .professional-status-image {
+//   }
+// }
+
+#rating_professional_status_student ~ .professional-status-image {
+  background-size: cover;
+  background-image: image-url("png_@2x/icon_student_disabled@2x.png.png");
+  width: 38.4px;
+  height: 27px;
+  &:hover {
     background-image: image-url("png_@2x/icon_student_enabled@2x.png.png");
   }
+}
+#rating_professional_status_student:hover ~ .professional-status-image, #rating_professional_status_student:checked ~ .professional-status-image {
+  background-image: image-url("png_@2x/icon_student_enabled@2x.png.png");
+}
 
-  #rating_professional_status_graduate ~ .professional-status-image {
-    background-size: cover;
-    background-image: image-url("png_@2x/icon_graduate_disabled@2x.png.png");
-    width: 40.9px;
-    height: 23.9px;
-    &:hover {
-      background-image: image-url("png_@2x/icon_graduate_enabled@2x.png.png");
-    }
-  }
-
-  #rating_professional_status_graduate:hover ~ .professional-status-image, #rating_professional_status_graduate:checked ~ .professional-status-image {
+#rating_professional_status_graduate ~ .professional-status-image {
+  background-size: cover;
+  background-image: image-url("png_@2x/icon_graduate_disabled@2x.png.png");
+  width: 40.9px;
+  height: 23.9px;
+  &:hover ~ .professional-status-image {
     background-image: image-url("png_@2x/icon_graduate_enabled@2x.png.png");
   }
+}
 
-  #rating_professional_status_trainee ~ .professional-status-image {
-    background-size: cover;
-    background-image: image-url("png_@2x/icon_trainee_disabled@2x.png.png");
-    width: 32.9px;
-    height: 28px;
-    &:hover {
-      background-image: image-url("png_@2x/icon_trainee_enabled@2x.png.png");
-    }
-  }
 
-  #rating_professional_status_trainee:hover ~ .professional-status-image, #rating_professional_status_trainee:checked ~ .professional-status-image {
+#rating_professional_status_graduate:hover ~ .professional-status-image, #rating_professional_status_graduate:checked ~ .professional-status-image {
+  background-image: image-url("png_@2x/icon_graduate_enabled@2x.png.png");
+}
+
+#rating_professional_status_trainee ~ .professional-status-image {
+  background-size: cover;
+  background-image: image-url("png_@2x/icon_trainee_disabled@2x.png.png");
+  width: 32.9px;
+  height: 28px;
+  &:hover {
     background-image: image-url("png_@2x/icon_trainee_enabled@2x.png.png");
   }
+}
 
-  #rating_professional_status_young_professional ~ .professional-status-image {
-    background-size: cover;
-    background-image: image-url("png_@2x/icon_young_professional_disabled@2x.png.png");
-    width: 31.3px;
-    height: 26.3px;
-    &:hover {
-      background-image: image-url("png_@2x/icon_young_professional_enabled@2x.png.png");
-    }
-  }
 
-  #rating_professional_status_young_professional:hover ~ .professional-status-image, #rating_professional_status_young_professional:checked ~ .professional-status-image {
+#rating_professional_status_trainee:hover ~ .professional-status-image, #rating_professional_status_trainee:checked ~ .professional-status-image {
+  background-image: image-url("png_@2x/icon_trainee_enabled@2x.png.png");
+}
+
+#rating_professional_status_young_professional ~ .professional-status-image {
+  background-size: cover;
+  background-image: image-url("png_@2x/icon_young_professional_disabled@2x.png.png");
+  width: 31.3px;
+  height: 26.3px;
+  &:hover {
     background-image: image-url("png_@2x/icon_young_professional_enabled@2x.png.png");
   }
 }
+
+#rating_professional_status_young_professional:hover ~ .professional-status-image, #rating_professional_status_young_professional:checked ~ .professional-status-image {
+  background-image: image-url("png_@2x/icon_young_professional_enabled@2x.png.png");
+}
+
+
+
+  .internship-professional-status-hover {
+    border: 2px solid #ffbd23 !important;
+    p {
+      color: #ffbd23 !important;
+    }
+  }
+
+  .rating_professional_status {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    .first-row, .second-row {
+      display: flex;
+      align-items: center;
+      flex: 0 0 50%;
+      .radio {
+        margin: 0;
+        height: 100%;
+        flex: 0 0 50%;
+        border: 1px solid #e0e5ec;
+        label {
+          p {
+            color: #8b8c8f;
+            font-weight: 400;
+          }
+          padding: 0;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          border: 0px solid #e0e5ec;
+          transition: border 200ms ease, color 200ms ease;
+        }
+        &:hover {
+          color: #ffbd23;
+          border: 2px solid #ffbd23;
+        }
+      }
+    }
+    input {
+      display: none;
+
+    }
+  }
+
+@media (max-width: 768px) {
+  .rating_professional_status {
+    flex-direction: column;
+    width: 300px;
+    height: 160px;
+    .first-row {
+      .radio:nth-child(1) {
+        border-top-left-radius: 10px;
+      }
+      .radio:nth-child(2) {
+        border-top-right-radius: 10px;
+      }
+    }
+    .second-row {
+      .radio:nth-child(1) {
+        border-bottom-left-radius: 10px;
+      }
+      .radio:nth-child(2) {
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .rating_professional_status {
+    flex-direction: row;
+    width: 100%px;
+    height: 70px;
+    label:hover > p {
+      color: #ffbd23 !important;
+    }
+    .first-row {
+      .radio:nth-child(1) {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+    }
+    .second-row {
+      .radio:nth-child(2) {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+
+
+
+
+

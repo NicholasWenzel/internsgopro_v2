@@ -1,3 +1,35 @@
+// DROPDOWN MOBILE
+$('#duration-dropdown').on('click', function(event){
+  event.preventDefault();
+  var target = $(this).data('target');
+  $(target).toggleClass('hidden-xs');
+});
+
+$('.rating_internship_duration span').on('click', function(){
+  var selected = $('label', this).text()
+  var target = $('#duration-dropdown').data('target');
+  $('#duration-dropdown .answer').text(selected);
+    if (!$(target).hasClass('hidden-xs')) {
+    $(target).addClass('hidden-xs');
+  }
+});
+
+// DROPDOWN MOBILE
+$('#net-salary-dropdown').on('click', function(event){
+  event.preventDefault();
+  var target = $(this).data('target');
+  $(target).toggleClass('hidden-xs');
+});
+
+$('.rating_net_salary_per_month span').on('click', function(){
+  var selected = $('label', this).text()
+  var target = $('#net-salary-dropdown').data('target');
+  $('#net-salary-dropdown .answer').text(selected);
+  if (!$(target).hasClass('hidden-xs')) {
+    $(target).addClass('hidden-xs');
+  }
+});
+
 // FUNCTION TO HAVE THE EXTRA BENEFITS BOX BORDER COLOR ON SELECT
 $('.extra_benefit_input').change(
   function(){

@@ -1,4 +1,24 @@
 <h4 class="sub-header">
   Net Salary/Month(€)
 </h4>
-<%= f.input :net_salary_per_month, label: false, as: :radio_buttons, collection: ["Not paid", "Less than 200€", "Less than 500€", "Less than 700€", "Less than 1000€", "More than 1000€"] %>
+
+<div class="net-salary-container">
+<a href="#" id="net-salary-dropdown" class="visible-xs" data-target="#net-salary-dropdown-menu">
+    <div class="dropdown-mobile-container">
+      <p class="title">
+        Net Salary/Month (&#8364;)
+      </p>
+      <p class="answer">
+        <!-- BLANK -->
+        
+      </p>
+      <div class="dropdown-arrow">
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </a>
+
+  <div class="hidden-xs" id="net-salary-dropdown-menu">
+    <%= f.input :net_salary_per_month, label: false, as: :radio_buttons, collection: ["Not paid", "Less than 200€", "Less than 500€", "Less than 700€", "Less than 1000€", "More than 1000€"] %>
+  </div>
+</div>

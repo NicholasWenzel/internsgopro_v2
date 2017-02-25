@@ -1,4 +1,14 @@
 // General css for whole summary
+// 
+
+.summary-page-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f6f8fa;
+}
+
 .top-summary-page {
   display: flex;
   justify-content: center;
@@ -18,18 +28,11 @@
 }
 
 .summary-page {
-  // height: 709px;
-  // TMP HEIGHT:
-  height: 500px;
   margin-top: 49px;
   background-color: #f6f8fa;
 }
 
 #summary {
-  max-width: 700px;
-  // height: 690px;
-  // TMP height:
-  height: 490px;
   border-radius: 4px;
   background-color: #ffffff;
   border: solid 1px #e0e5ec;
@@ -39,6 +42,135 @@
 .summary_section {
   margin: 0 auto;
 }
+
+.certified-internships {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+    .share_and_newsletter-container {
+      width: 100%;
+      margin-left: 22px;
+      display: flex;
+      p {
+        color: #4c4a4e;
+        text-align: left;
+        font-size: 14px;
+      }
+      .title-share-card {
+        margin-top: 22px;
+        margin-bottom: 19px;
+        .airplane-icon {
+          background-image: image-url("png_@1x/icon_trip@1x.png");
+          width: 42px;
+          height: 42px;
+          margin-left: 15px;
+          margin-right: 7px;
+          float: left;
+        }
+      }
+      .title-newsletter-card {
+        margin-top: 22px;
+        margin-bottom: 19px;
+        .envelope-icon {
+          background-size: cover;
+          background-image: image-url("png_@1x/icon_newsletter@1x.png");
+          width: 42px;
+          height: 42px;
+          margin-left: 15px;
+          margin-right: 7px;
+          float: left;
+        }
+      }
+      .submit-newsletter {
+
+        .input-newsletter{
+          margin-left: 8px;
+          margin-top: 23px;
+          margin-bottom: 10px;
+        }
+        input[type=text] {
+          width: 280px;
+          height: 40px;
+          border-radius: 4px;
+          background-color: #ffffff;
+          border: solid 1px #e0e5ec;
+          color: #8b8c8f;
+          padding-left: 20px;
+        }
+        input[type="submit"] {
+          width: 112px;
+          height: 40px;
+          border-radius: 4px;
+          background-color: #74b05d;
+          border: solid 1px #74b05d;
+          color: white;
+        }
+        .submit-newsletter-button {
+          float: right;
+          margin-right: 13px;
+        }
+
+      }
+      .card-summary {
+        margin: 15px;
+        width: 300px;
+        height: 201.4px;
+        border-radius: 4px;
+        background-color: #f6f8fa;
+        border: solid 1px #efefef;
+      }
+      .share-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .facebook-share-button {
+        border-radius: 4px;
+        background-color: #3b5998;
+        border: solid 1px #3b5998;
+        height: 40px;
+        width: 180px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        color: #ffffff;
+        padding-top: 5px;
+        .fafa-icon-share {
+          margin-right: 10px;
+          margin-left: 9px;
+          margin-bottom: 6px;
+        }
+        p {
+          color: #ffffff;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+      .twitter-share-button {
+        border-radius: 4px;
+        background-color: #1da1f2;
+        border: solid 1px #1da1f2;
+        height: 40px;
+        width: 180px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        color: #ffffff;
+        .fafa-icon-share {
+          margin: 7px;
+        }
+        p {
+          color: #ffffff;
+          text-align: center;
+          font-size: 14px
+        }
+
+      }
+    }
+
 
 // CSS for top part summary
 .summary-headline {
@@ -74,6 +206,12 @@
       line-height: 2;
     }
   }
+}
+
+.intern-opportunities {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 // CSS for stars part summary
 .stars-summary {
@@ -115,6 +253,7 @@
     .title-share-card {
       margin-top: 15px;
       .airplane-icon {
+        background-size: cover;
         background-image: image-url("png_@1x/icon_trip@1x.png");
         width: 20px;
         height: 20px;
@@ -177,9 +316,7 @@
   }
 
   .intern-opportunities {
-    height: 250px;
-    width: 710px;
-    margin-left: 366px;
+
     .title-int-opportunities {
       font-size: 14px;
       margin-top: 20px;
@@ -208,13 +345,20 @@
       height: 19px;
 
     }
+
+    .opportunity-card-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 700px;
+    }
+
     .opportunity-card {
-     width: 180px;
+     width: 155px;
      height: 160px;
      border-radius: 8px;
      background-color: #ffffff;
      border: solid 1px #f3f3f3;
-     margin: 16px 10px;
      display: flex;
      justify-content: center;
      flex-direction: column;
@@ -242,12 +386,6 @@
   }
 }
 
-// TMP:
-.certified-internships {
-    // TMP:
-    margin-top: 150px;
-  }
-//
 .link-button {
   color: white;
   text-decoration: none;
@@ -261,9 +399,4 @@
   width: 740px;
   display: flex;
   justify-content: flex-end;
-}
-
-.cards-certified-internships {
-  display: flex;
-  justify-content: center;
 }

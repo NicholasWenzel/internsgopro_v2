@@ -2,29 +2,55 @@
   Select Extra Benefits
 </h4>
 <% check_boxes = [
-  "extra_benefit_meal_voucher",
-  "extra_benefit_transport",
-  "extra_benefit_insurance",
-  "extra_benefit_accomodation"
+  :extra_benefit_meal_voucher,
+  :extra_benefit_transport,
+  :extra_benefit_insurance,
+  :extra_benefit_accomodation
   ] %>
+
+<% content = {
+  extra_benefit_meal_voucher: "Meal Vouchers",
+  extra_benefit_transport: "Transport Costs",
+  extra_benefit_insurance: "Insurance",
+  extra_benefit_accomodation: "Accomodation"
+  } %>
 
   <div class="extra_benefits_check_boxes">
 
-    <% check_boxes.each do |check_box| %>
+    <div class="first-row">
+      <% check_boxes.first(2).each do |check_box| %>
 
-    <div class="check_boxes optional rating_<%= check_box %>">
-      <input type="hidden" name="rating[<%= check_box %>][]" value="">
-      <span>
-        <label for="rating_<%= check_box %>_true" class="extra_benefits_label">
-          <input class="optional extra_benefit_input" type="checkbox" value="true" name="rating[<%= check_box %>][]" id="rating_<%= check_box %>_true">
-          <div class="image_<%= check_box %>"></div>
-          <p>
-            <%= check_box.gsub(/extra_benefit_/, "").gsub(/_/, " ") %>
-          </p>
-        </label>
-      </span>
+      <div class="check_boxes optional rating_<%= check_box %>">
+        <input type="hidden" name="rating[<%= check_box %>][]" value="">
+        <span>
+          <label for="rating_<%= check_box %>_true" class="extra_benefits_label">
+            <input class="optional extra_benefit_input" type="checkbox" value="true" name="rating[<%= check_box %>][]" id="rating_<%= check_box %>_true">
+            <div class="image_<%= check_box %>"></div>
+            <p>
+              <%= content[check_box] %>
+            </p>
+          </label>
+        </span>
+      </div>
+
+      <% end %>
     </div>
+    <div class="second-row">
+      <% check_boxes.last(2).each do |check_box| %>
 
-    <% end %>
+      <div class="check_boxes optional rating_<%= check_box %>">
+        <input type="hidden" name="rating[<%= check_box %>][]" value="">
+        <span>
+          <label for="rating_<%= check_box %>_true" class="extra_benefits_label">
+            <input class="optional extra_benefit_input" type="checkbox" value="true" name="rating[<%= check_box %>][]" id="rating_<%= check_box %>_true">
+            <div class="image_<%= check_box %>"></div>
+            <p>
+              <%= content[check_box] %>
+            </p>
+          </label>
+        </span>
+      </div>
 
+      <% end %>
+    </div>
   </div>

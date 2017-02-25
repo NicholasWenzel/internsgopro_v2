@@ -13,6 +13,19 @@
   }
 }
 
+.btn-summary {
+  height: 52px;
+  width: 169px;
+  border-radius: 4px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
 .btn-green {
   color: white;
   background-color: #74b05d;
