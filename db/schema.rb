@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206174123) do
+ActiveRecord::Schema.define(version: 20170209164718) do
 
   create_table "employers", force: :cascade do |t|
     t.string   "name"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20170206174123) do
     t.string   "department"
     t.integer  "internship_start_year"
     t.string   "internship_duration"
-    t.integer  "net_salary_per_month"
+    t.string   "net_salary_per_month"
     t.boolean  "extra_benefit_meal_voucher",    default: false
     t.boolean  "extra_benefit_transport_costs", default: false
     t.boolean  "extra_benefit_insurance",       default: false

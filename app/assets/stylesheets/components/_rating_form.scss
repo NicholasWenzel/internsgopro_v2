@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 35px;
+  margin-top: 65px;
 }
 
 #section_2 {
@@ -27,7 +27,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
-    color: #4c4a4e;
+    color: #5B585D;
   }
 }
 
@@ -56,7 +56,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
       color: #c3c3c3;
     }
     h3 {
-      font-size: 25px;
+      font-size: 30px;
       color: #4c4a4e;
       line-height: 1;
     }
@@ -69,10 +69,18 @@ and (-webkit-min-device-pixel-ratio: 1) {
     margin-top: 50px;
     margin-bottom: 75px;
     h3 {
-      font-size: 25px;
+      font-size: 30px;
       color: #4c4a4e;
       line-height: 1;
     }
+  }
+  .information-button {
+    background-image: image-url('png_@1x/btn_informative-desktop@1x.png');
+    float: right;
+    height: 22px;
+    width: 22px;
+    margin-top: 3px;
+    margin-left: 3px;
   }
 }
 
@@ -140,15 +148,6 @@ and (-webkit-min-device-pixel-ratio: 1) {
     input {
       max-width: 300px;
       margin: 0 auto;
-    }
-  }
-
-
-  .dropdown-button-container {
-    max-width: 300px;
-    margin: 0 auto;
-    input {
-      width: 300px;
     }
   }
 
@@ -305,7 +304,7 @@ and (orientation: portrait) {
     background-image: image-url('png_@1x/icon_privacy@1x.png');
     color: #4c4a4e;
     height: 37px;
-    width: 43px;
+    width: 37px;
     float: left;
     margin: 14px;
   }
@@ -316,49 +315,55 @@ and (orientation: portrait) {
     height: 3px;
     border: solid 1px #dddddd;
   }
+  .text-end-form {
+    margin-top: 8px;
+    p {
+      font-size: 15px
+    }
+    i {
+      color: #c3c3c3;
+    }
+  }
+  .divider-center {
+    padding-left: 180px;
+    margin: 28px 0px;
+  }
 }
 
 
 .facebook-button {
-  // background-image: image-url('png_@1x/btn_signin_facebook_desktop@1x.png');
   border-radius: 4px;
   background-color: #3b5998;
   border: solid 1px #3b5998;
-  max-height: 52px;
+  height: 52px;
   max-width: 380px;
   margin-top: 20px;
-  margin-bottom: 10px;
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   color: #ffffff;
   p {
     color: #ffffff;
     text-align: center;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-}
+    margin: 0px !important;
+  }
 }
 
 .linkedin-button {
   border-radius: 4px;
-  max-height: 52px;
+  height: 52px;
   max-width: 380px;
   margin-top: 20px;
-  margin-bottom: 10px;
   background-color: #0077b5;
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   color: #ffffff;
   p {
     color: #ffffff;
     text-align: center;
-  // display: flex;
-  // // flex-direction: column;
-  // justify-content: center;
-}
+    margin: 0px !important;
+  }
 }
 
 .fafa-icon {
@@ -382,7 +387,7 @@ and (orientation: portrait) {
       font-weight: 600;
       font-size: 16px;
       line-height: 30px;
-      color: #4c4a4e;
+      color: #5B585D;
     }
     i {
       color: #d1d1d1;
@@ -465,34 +470,50 @@ and (orientation: portrait) {
   color: #3b393d;
 }
 
-.star-information-popover-link {
-  // FIX ME
-  // background-image: image-url('png_@1x/btn_informative-desktop@1x.png');
-  // height: 10px;
-  // width: 10px;
-}
 
 // CSS for the error messages on section 1
 .star_error_message {
-  color: #EE5F5B;
+  color: #E20606;
   span {
     font-weight: bold;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #EE5F5B;
+    border: 2px solid #E20606;
     display: inline-flex;
     justify-content: center;
     align-items: center;
   }
 }
+.error-message-section-2{
+  color: #d0021b;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.exclamationmark {
+  background-image: image-url('png_@1x/error_message@1x.png');
+  width: 13px;
+  height: 13px;
+  float: left;
+  margin-right: 3px;
+}
 
 // Css for the yes/no fields
 .yes-no-field {
+  padding-left: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  h4 {
+    color: #5B585D;
+  }
+}
+
+.yes-no-padding {
+  padding-left: 10.1px;
 }
 
 .section-2-yes-no {
@@ -551,12 +572,6 @@ and (orientation: portrait) {
     .check-input {
       &:checked ~ .label-section-2-selection .styled-meal-icon {
         color: #ffbd23;
-        // FIX ME: get the borders when selected
-        // in proportion
-        // border: 2px solid #ffbd23;
-        // height: 68px;
-        // max-width: 120px;
-        // padding: 10px;
       }
     }
     label {
@@ -568,8 +583,6 @@ and (orientation: portrait) {
     }
   }
 }
-
-
 
 
 
@@ -696,13 +709,13 @@ and (orientation: portrait) {
 
 //////
 
+
 .titles-section-2 {
   h4 {
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
     color: #4c4a4e;
-    // TMP
-    margin-bottom: 35px
+    margin-bottom: 20px;
   }
 }

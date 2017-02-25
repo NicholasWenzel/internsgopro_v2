@@ -52,7 +52,6 @@ class RatingsController < ApplicationController
   private
 
   def set_star_fields
-    # rating_recommendation: "Would you recommend your internship?",
     @star_fields = {
       rating_goals: "Clarity of Learning Objectives",
       rating_objectives: "Learning objectives were respected",
@@ -95,7 +94,6 @@ class RatingsController < ApplicationController
   end
 
   def create_statement_summary
-    # FIX ME: check the scores and appropriate statements
     if @score >= 4 && @score <= 5
       @glad_to_hear = "We are glad to hear you had a"
       @good_bad_statement = "Good Internship!"

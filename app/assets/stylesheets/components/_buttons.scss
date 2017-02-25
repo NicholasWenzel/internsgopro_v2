@@ -2,7 +2,7 @@
   height: 52px;
   width: 169px;
   border-radius: 4px;
-  margin: 50px 40px;
+  margin: 50px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,9 +28,9 @@
 
 .btn-green {
   color: white;
-  background-color: #74b05d;
+  background-color:  #5CB85C;
   &:hover {
-    background-color: #74b05d;
+    background-color:  #5CB85C;
     color: white;
   }
 }

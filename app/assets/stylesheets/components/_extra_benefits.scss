@@ -4,6 +4,17 @@
     color: #ffbd23 !important;
   }
 }
+.extra_benefits_label {
+  color: #4c4a4e;
+  transition: color 200ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
 
 .extra_benefits_check_boxes {
   display: flex;

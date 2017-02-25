@@ -15,12 +15,12 @@
 @import "config/variables";
 @import "config/bootstrap_variables";
 
-// EXTERNAL
+// // EXTERNAL
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
-// LOCAL SCSS
+// // LOCAL SCSS
 @import "admin/application";
 @import "components/index";
 @import "employers";
