@@ -30,7 +30,7 @@
 #rating_professional_status_trainee ~ .professional-status-image {
   background-size: cover;
   background-image: image-url("png_@2x/icon_trainee_disabled@2x.png.png");
-  width: 32.9px;
+  width: 33px;
   height: 28px;
   &:hover {
     background-image: image-url("png_@2x/icon_trainee_enabled@2x.png.png");
@@ -88,7 +88,7 @@
         padding: 0;
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         flex-direction: column;
         border: 0px solid #e0e5ec;

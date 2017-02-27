@@ -136,6 +136,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
     .icon-end {
       background-image: image-url('png_@1x/icon_privacy@1x.png');
       background-size: cover;
+      background-repeat: no-repeat;
       width: 37px;
       height: 37px;
     }
@@ -304,7 +305,8 @@ and (orientation: portrait) {
     background-image: image-url('png_@1x/icon_privacy@1x.png');
     color: #4c4a4e;
     height: 37px;
-    width: 37px;
+    background-repeat: no-repeat;
+    width: 44px;
     float: left;
     margin: 14px;
   }
