@@ -56,7 +56,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
       color: #c3c3c3;
     }
     h3 {
-      font-size: 30px;
+      font-weight: 600;
       color: #4c4a4e;
       line-height: 1;
     }
@@ -104,8 +104,16 @@ and (-webkit-min-device-pixel-ratio: 1) {
   .comments-conditions {
     margin: 0 !important;
     max-width: 300px;
-    .rating-read-conditions {
-      color: #8b8c8f;
+    .rating_read_conditions {
+      border-bottom: 1px solid #e0e5ec;
+      .checkbox {
+        label {
+          color: #8b8c8f;
+          .fa {
+            color: #c3c3c3;
+          }
+        }
+      }
     }
     .rating_additional_comments {
       font-size: 14px;
@@ -142,6 +150,12 @@ and (-webkit-min-device-pixel-ratio: 1) {
     }
     .text-end-form {
       flex: 0 0 80%;
+      span {
+        font-weight: 600;
+      }
+      .fa {
+        color: #c3c3c3;
+      }
     }
   }
 
