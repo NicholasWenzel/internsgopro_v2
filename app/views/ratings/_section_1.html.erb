@@ -1,9 +1,15 @@
 <!-- Section 1 -->
 
 <div id="section_1" class="rating_section">
+  <div class="visible-xs">
+    <div class="progress-bar-top">
+      <div class="green"></div>
+      <div class="gray"></div>
+    </div>
+  </div>
   <!-- These are the breadcrumbs for section 1 -->
   <!-- breadcrumbs for desktop -->
-  <div class="orbs-desktop">
+  <div class="orbs-desktop hidden-xs">
     <div id="section_1_status" class="orbs_container">
       <div class="orb orb-step-1">
         1
@@ -24,96 +30,109 @@
       </p>
     </div>
   </div>
-  <!-- breadcrumbs for mobile -->
-  <div class="orbs-mobile">
-    <div id="section_1_status" class="orbs_container">
-      <div class="orb orb-step-1">
-        1
+
+  <div class="orbs-mobile visible-xs">
+    <div class="orbs-container">
+      <div class="orb-container">
+        <div class="orb orb-step-1">
+          1
+        </div>
+        <p>
+          GENERAL
+        </p>
       </div>
-      <p>
-        GENERAL
-      </p>
-      <div class="orb orb-step-2">
-        2
-      </div>
-      <a href="#" class="section_switch_button" data-target="#section_2">
+      <div class="orb-container">
+        <a href="#" class="section_switch_button" data-target="#section_2">
+          <div class="orb orb-step-2">
+            2
+          </div>
+        </a>
         <p>
           DETAILED
         </p>
-      </a>
-    </div>
-</div>
-<div class="header-section-1">
-  <div class="icon-main">
-  </div>
-  <div class="text-main-header">
-    <h3>
-      Review your experience as an intern
-      <span class="star-information-popover-link">
-      <div class="information-button" data-target="#information-text-section-1"></div>
-      </span>
-    </h3>
-    <p>
-      It's anonymous and you'll be helping other job seekers
-    </p>
-    <div class="divider"></div>
-    <div id="information-text-section-1" class="star-information-popover">
-    <h5><b>I am a popover title</b></h5>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora, ipsam aperiam distinctio ex facere repellendus, reiciendis alias laboriosam consectetur.
-      </p>
-    </div>
-  </div>
-</div>
-<div class="form-section-1">
-  <div class="dropdown-button-container">
-    <%= f.input :employer, placeholder: 'Select Employer', label: false, input_html: { class: "rating-form-check-fields rating-form-fields"} %>
-    <div class="dropdown-arrow">
-      <div class="arrow"></div>
-    </div>
-  </div>
-  <div class="dropdown-button-container">
-    <%= f.input :location, placeholder: 'Select Location', label: false, input_html: { class: "rating-form-check-fields rating-form-fields" } %>
-    <div class="dropdown-arrow">
-      <div class="arrow"></div>
-    </div>
-  </div>
-  <div class="yes-no-field">
-    <h4>
-      Would you recommend you internship?
-    </h4>
-    <div class="form-group radio_buttons optional rating_contract_signed">
-      <input type="hidden" name="rating[rating_recommendation]" value="">
-      <div class="section-2-yes-no">
-        <span>
-          <label for="rating[rating_recommendation]">
-            <input class="radio_buttons optional hide-input" type="radio" value="true" name="rating[rating_recommendation]" id="rating[rating_recommendation]">
-            <div class="section-2-radio">
-              <div class="styled-radio-button"></div>
-              <div class="yes-no-padding"> Yes</div>
-            </div>
-          </label>
-        </span>
-        <span>
-          <label for="rating_rating_recommendation_false">
-            <input class="radio_buttons optional hide-input" readonly="readonly" type="radio" value="false" name="rating[rating_recommendation]" id="rating_rating_recommendation_false">
-            <div class="section-2-radio">
-              <div class="styled-radio-button"></div>
-              <div class="yes-no-padding"> No</div>
-            </div>
-          </label>
-        </span>
       </div>
     </div>
   </div>
-  <div class="rating-stars-container">
-    <% @star_fields.each do |field_value, display_text| %>
-    <%= render partial: 'star_rating', locals: { field_value: field_value, display_text: display_text, f: f } %>
-    <% end %>
-  </div>
 
-</div>
-<div class="button-container">
-  <a href="#" class="section_switch_button btn btn-green" data-target="#section_2"> Continue</a>
-</div>
+
+  <div class="header-section-1">
+    <div class="icon-main hidden-xs">
+    </div>
+    <div class="text-main-header">
+      <h3>
+        Review your experience as an intern
+        <span class="star-information-popover-link">
+          <i class="fa fa-info-circle" data-target="#information-text-section-1"></i>
+        </span>
+      </h3>
+      <p>
+        It's anonymous and you'll be helping other job seekers
+      </p>
+      <div class="divider"></div>
+      <div id="information-text-section-1" class="star-information-popover">
+        <h5><b>I am a popover title</b></h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora, ipsam aperiam distinctio ex facere repellendus, reiciendis alias laboriosam consectetur.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="form-section-1">
+    <div class="dropdown-button-container">
+      <p class="title">
+        Select Employer
+      </p>
+      <%= f.input :employer, placeholder: false, label: false, input_html: { class: "rating-form-check-fields rating-form-fields"} %>
+      <div class="dropdown-arrow">
+        <div class="arrow"></div>
+      </div>
+    </div>
+    <div class="dropdown-button-container">
+      <p class="title">
+        Select Location
+      </p>
+      <%= f.input :location, placeholder: false, label: false, input_html: { class: "rating-form-check-fields rating-form-fields" } %>
+      <div class="dropdown-arrow">
+        <div class="arrow"></div>
+      </div>
+    </div>
+    <div class="yes-no-field">
+      <h4>
+        Would you recommend you internship?
+      </h4>
+      <div class="form-group radio_buttons optional rating_contract_signed">
+        <input type="hidden" name="rating[rating_recommendation]" value="">
+        <div class="section-2-yes-no">
+          <span>
+            <label for="rating[rating_recommendation]">
+              <input class="radio_buttons optional hide-input" type="radio" value="true" name="rating[rating_recommendation]" id="rating[rating_recommendation]">
+              <div class="section-2-radio">
+                <div class="styled-radio-button"></div>
+                Yes
+              </div>
+            </label>
+          </span>
+          <span>
+            <label for="rating_rating_recommendation_false">
+              <input class="radio_buttons optional hide-input" readonly="readonly" type="radio" value="false" name="rating[rating_recommendation]" id="rating_rating_recommendation_false">
+              <div class="section-2-radio">
+                <div class="styled-radio-button"></div>
+                No
+              </div>
+            </label>
+          </span>
+        </div>
+
+      </div>
+    </div>
+    <div class="rating-stars-container">
+      <% @star_fields.each do |field_value, display_text| %>
+      <%= render partial: 'star_rating', locals: { field_value: field_value, display_text: display_text, f: f } %>
+      <% end %>
+    </div>
+
+  </div>
+  <div class="button-container">
+    <a href="#" class="section_switch_button btn btn-green" data-target="#section_2"> Continue</a>
+  </div>
 </div>

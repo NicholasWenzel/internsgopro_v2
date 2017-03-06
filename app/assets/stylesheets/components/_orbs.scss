@@ -1,16 +1,10 @@
-// Orbs for desktop
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-
-  .orbs_container {
-    margin-top: 63px;
-    margin: 20px auto;
-    width: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.orbs_container {
+  margin-top: 100px;
+  margin: 20px auto;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   .connecting_line {
     flex: 1 0 auto;
@@ -18,17 +12,12 @@
   }
   a {
     text-decoration: none;
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+    }
   }
 }
-.orb {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
 .description-breadcrumbs {
   display: flex;
   justify-content: center;
@@ -38,32 +27,38 @@
     margin: 0px 15px;
   }
 }
+
 .orbs-mobile {
-    display: none;
-  }
-}
-
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait)  {
-
-  .orbs_container {
-    margin-top: 25px;
-    margin: 20px auto;
-    width: 180px;
+  .orbs-container {
+    a {
+      text-decoration: none;
+      background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
+    }
     display: flex;
+    justify-content: space-between;
     align-items: center;
-  a {
-    text-decoration: none;
-    color: #bdbdbd;
-  }
+    .orb-container {
+      margin: 0 10px;
+      flex: 1 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
     p {
-    margin: 4px;
-    font-size: 11px;
+      color: #bdbdbd;
+      margin: 0 10px;
+      font-weight: 400;
+    }
   }
 }
+
+
+
+// Colours for the orbs are dependend on the values set in _variables.scss
+
 .orb {
   width: 40px;
   height: 40px;
@@ -71,16 +66,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-
 }
-
-.orbs-desktop {
-    display: none;
-  }
-}
-
-
-// Colours for the orbs are dependend on the values set in _variables.scss
 
 .orb-step-1 {
   color: white;

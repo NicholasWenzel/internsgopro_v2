@@ -1,3 +1,9 @@
+.extra_benefit_hover {
+  border: 2px solid #ffbd23 !important;
+  p {
+    color: #ffbd23 !important;
+  }
+}
 .extra_benefits_label {
   color: #4c4a4e;
   transition: color 200ms ease;
@@ -8,64 +14,89 @@
   height: 100%;
   justify-content: center;
   margin-top: 8px;
-  p {
-    font-size: 14px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #8b8c8f;
-    width: 120px;
-    text-align: center;
-  }
-  input {
-    display: none;
-    &:checked ~ p {
-      color: #ffbd23;
-    }
-  }
-  &:hover p {
-    color: #ffbd23;
-  }
 }
 
 .extra_benefits_check_boxes {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background: white;
-  border-radius: 6px;
-  border: solid 1px #e0e5ec;
+  border-radius: 10px;
   overflow: hidden;
-  .extra_benefit_hover {
-    border: 2px solid #ffbd23 !important;
-  }
-  .check_boxes {
+  .first-row, .second-row {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex: 1 0 auto;
-    border: 2px solid white;
-    transition: border 200ms ease;
-    span {
-      width: 100%;
+    flex: 0 0 50%;
+    height: 50%;
+    input {
+      display: none;
+    }
+    .check_boxes {
+      margin: 0;
       height: 100%;
+      flex: 0 0 50%;
+      border: 1px solid #e0e5ec;
+      label {
+        p {
+          color: #8b8c8f;
+          font-weight: 400;
+        }
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 0px solid #e0e5ec;
+      }
+      &:hover {
+        color: #ffbd23;
+        border: 2px solid #ffbd23;
+      }
     }
-    &:hover {
-      border: 2px solid #ffbd23 !important;
-    }
-    &:nth-child(2) {
-      border-left: 2px solid #e0e5ec;
-    }
-    &:nth-child(3) {
-      border-left: 2px solid #e0e5ec;
-    }
-    &:first-child {
-      border-top-left-radius: 6px;
-      border-bottom-left-radius: 6px;
+  }
+}
 
+@media (max-width: 768px) {
+  .extra_benefits_check_boxes {
+    flex-direction: column;
+    width: 300px;
+    height: 160px;
+    .first-row {
+      .check_boxes:nth-child(1) {
+        border-top-left-radius: 10px;
+      }
+      .check_boxes:nth-child(2) {
+        border-top-right-radius: 10px;
+      }
     }
-    &:last-child {
-      border-left: 2px solid #e0e5ec;
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
+    .second-row {
+      .check_boxes:nth-child(1) {
+        border-bottom-left-radius: 10px;
+      }
+      .check_boxes:nth-child(2) {
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .extra_benefits_check_boxes {
+    flex-direction: row;
+    width: 100%px;
+    height: 70px;
+    label:hover > p {
+      color: #ffbd23 !important;
+    }
+    .first-row {
+      .check_boxes:nth-child(1) {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+    }
+    .second-row {
+      .check_boxes:nth-child(2) {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
     }
   }
 }
@@ -112,9 +143,16 @@
   background-size: cover;
   transition: background-image 200ms ease;
   width: 38px;
-  height: 27.9px;
+  height: 28px;
   will-change: background-image;
 }
 .extra_benefits_label:hover .image_extra_benefit_accomodation, .extra_benefits_label input:checked ~ .image_extra_benefit_accomodation {
   background-image: image-url("png_@2x/icon_accomodation_enabled@2x.png.png");
 }
+
+
+
+
+
+
+

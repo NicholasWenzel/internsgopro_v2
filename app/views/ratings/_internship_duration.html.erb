@@ -1,4 +1,25 @@
 <h4 class="sub-header">
   Internship Duration
 </h4>
-<%= f.input :internship_duration, label: false, as: :radio_buttons, collection: ["Less than 3 months", "3 months", " Less than 6 months", "6 months", "Less than a year", "1 year or more"],wrapper_html: { class: "append-error-message-duration" } %>
+
+<div class="duration-container">
+  <a href="#" id="duration-dropdown" class="visible-xs" data-target="#duration-dropdown-menu">
+    <div class="dropdown-mobile-container">
+      <p class="title">
+        Internship duration
+      </p>
+      <p class="answer">
+        <!-- BLANK -->
+        
+      </p>
+      <div class="dropdown-arrow">
+        <div class="arrow"></div>
+      </div>
+    </div>
+  </a>
+
+  <div class="hidden-xs" id="duration-dropdown-menu">
+    <%= f.input :internship_duration, label: false, as: :radio_buttons, collection: ["Less than 3 months", "3 months", " Less than 6 months", "6 months", "Less than a year", "1 year or more"] %>
+  </div>
+</div>
+
