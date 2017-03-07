@@ -1,14 +1,8 @@
 <!-- Section 2 -->
 <div id="section_2" class="rating_section hidden">
-  <div class="visible-xs">
-    <div class="progress-bar-top">
-      <div class="green"></div>
-      <div class="gray"></div>
-    </div>
-  </div>
   <!-- These are the breadcrumbs for section 2 -->
   <!-- orbs desktop -->
-  <div class="orbs-desktop hidden-xs">
+  <div class="orbs-desktop">
     <div id="section_2_status" class="orbs_container">
       <a href="#" class="section_switch_button" data-target="#section_1">
         <div class="orb orb-check">
@@ -30,32 +24,29 @@
     </div>
   </div>
 
-  <div class="orbs-mobile visible-xs">
-    <div class="orbs-container">
-      <div class="orb-container">
+  <!-- orbs mobile -->
+  <div class="orbs-mobile">
+    <div id="section_2_status" class="orbs_container">
+      <div class="orb orb-check">
         <a href="#" class="section_switch_button" data-target="#section_1">
-          <div class="orb orb-check">
-            <i class="fa fa-check"></i>
-          </div>
+          <i class="fa fa-check"></i>
         </a>
-        <p>
-          GENERAL
-        </p>
       </div>
-      <div class="orb-container">
-        <div class="orb orb-step-2">
-          2
-        </div>
-        <p>
-          DETAILED
-        </p>
+      <p>
+        GENERAL
+      </p>
+      <div class="orb orb-step-2">
+        2
       </div>
+      <p>
+        DETAILED
+      </p>
     </div>
   </div>
 
 
   <div class="header-section-2">
-    <div class="icon-main hidden-xs">
+    <div class="icon-main">
     </div>
     <div class="text-main-header">
      <h3>
@@ -70,7 +61,6 @@
   <div id="information-text-section-1" class="star-information-popover">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint tempora, ipsam aperiam distinctio ex facere repellendus, reiciendis alias laboriosam consectetur.
   </div>
-<div class="divider"></div>
 </div>
 </div>
 <%= render partial: "internship_job_info", locals: { f: f } %>
@@ -85,8 +75,8 @@
 
 
 <div class="comments-conditions">
-  <%= f.input :additional_comments, placeholder: 'Do you have anything to add?', label: false, input_html: {class: "comment-box"} %>
-  <%= f.input :read_conditions, as: :boolean, inline_label: 'I certify that this rating is based on my own professional experience and is my genuine opinion of this organisation. I understand that InternsGoPro has a zero-tolerance policy on fake ratings.' %>
+  <%= f.input :additional_comments, placeholder: 'How would you like to describe your internship?', label: false, input_html: {class: "comment-box"} %>
+  <%= f.input :read_conditions, as: :boolean, inline_label: 'I certify that this rating is based on my own professional experience and is genuine opinion of this organisation.I understand that InternsGoPro has a zero-tolerance policy on fake ratings.', wrapper_html: {class: "append-error-message-conditions"} %>
 </div>
 <hr>
 

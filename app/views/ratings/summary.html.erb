@@ -1,171 +1,153 @@
-<div class="container">
-  <div class="summary-page-container">
-    <div class="summary-page">
-      <div class="top-summary-page">
-        <div class="thumbs-up-icon"></div>
-        <h4><b>Thank you for your feedback!</b></h4>
+<div class="body-summary">
+  <div class="summary-page">
+    <div class="top-summary-page">
+     <div class="thumbs-up-icon"></div>
+     <h4><b>Thank you for your feedback!</b></h4>
+   </div>
+   <div id="summary" class="summary_section">
+     <div class="summary-headline">
+      <div class="circle">
+        <!-- Variables @score / @glad_to_hear / @good_bad_statement -->
+        <!-- Get created in the controller and send here -->
+        <p><%= @score %> <i class="fa fa-star"></i></p>
       </div>
-      <div id="summary" class="summary_section">
-        <div class="summary-headline">
-          <div class="circle">
-            <p><%= @score %> <i class="fa fa-star"></i></p>
+      <div class="outcome-review">
+        <p><b><%= @glad_to_hear %></b></p>
+        <h2><%= @good_bad_statement %></h2>
+      </div>
+    </div>
+    <div class="stars-summary">
+      <div class="star-coloring-summary stars-left">
+        <!-- @display_values_stars[left|right] is a hash coming from the controller -->
+        <% @display_values_stars_left.each do |name_value, score_value| %>
+        <%= render partial: 'star_summary', locals: { score_value: score_value, name_value: name_value } %>
+        <% end %>
+      </div>
+      <div class="star-coloring-summary">
+        <% @display_values_stars_right.each do |name_value, score_value| %>
+        <%= render partial: 'star_summary', locals: { score_value: score_value, name_value: name_value} %>
+        <% end %>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="share_and_newsletter-container">
+      <div class="share-field card-summary">
+        <div class="title-share-card">
+          <div class="airplane-icon">
           </div>
-          <div class="outcome-review">
-            <p><b><%= @glad_to_hear %></b></p>
-            <h2><%= @good_bad_statement %></h2>
+          <div class="text-share-card">
+            <p>Share InternsGoPro and get a chance to <b>win a trip to <u>Madrid!</u></b></p>
           </div>
         </div>
-        <div class="stars-summary">
-          <div class="row">
-            <div class="col-xs-12 col-lg-6">
-              <div class="star-coloring-summary stars-left">
-                <!-- @display_values_stars[left|right] is a hash coming from the controller -->
-                <% @display_values_stars_left.each do |name_value, score_value| %>
-                <%= render partial: 'star_summary', locals: { score_value: score_value, name_value: name_value } %>
-                <% end %>
-              </div>
-            </div>
-            <div class="col-xs-12 col-lg-6">
-              <div class="star-coloring-summary">
-                <% @display_values_stars_right.each do |name_value, score_value| %>
-                <%= render partial: 'star_summary', locals: { score_value: score_value, name_value: name_value} %>
-                <% end %>
-              </div>
-            </div>
+        <div class="facebook-share-button">
+          <div class="fafa-icon-share">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+          </div>
+          <div class="text-button-social">
+            <p>Share on <b>Facebook</b></p>
           </div>
         </div>
-        <div class="divider"></div>
-
-        <div class="share_and_newsletter-container">
-          <div class="row">
-            <div class="col-xs-12 col-lg-6">
-              <div class="share-field card-summary">
-                <div class="title-share-card">
-                  <div class="airplane-icon">
-                  </div>
-                  <div class="text-share-card">
-                    <p>Share InternsGoPro and get a chance to <b>win a trip to <u>Madrid!</u></b></p>
-                  </div>
-                </div>
-                <div class="facebook-share-button">
-                  <div class="fafa-icon-share">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                  </div>
-                  <div class="text-button-social">
-                    <p>Share on <b>Facebook</b></p>
-                  </div>
-                </div>
-                <div class="twitter-share-button">
-                  <div class="fafa-icon-share">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                  </div>
-                  <div class="text-button-social">
-                    <p>Share on <b>Twitter</b></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-lg-6">
-
-              <div class="newsletter-field card-summary">
-                <div class="title-newsletter-card">
-                  <div class="envelope-icon"></div>
-                  <p>Subscribe to our newsletter<br>to see new certified internships.</p>
-                </div>
-                <div class="submit-newsletter">
-                  <form action="/">
-                    <div class="input-newsletter">
-                      <input type="text", placeholder="Email">
-                    </div>
-                    <div class="submit-newsletter-button">
-                      <input type="submit", value="Subscribe", class="btn-newsletter">
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
+        <div class="twitter-share-button">
+          <div class="fafa-icon-share">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+          <div class="text-button-social">
+            <p>Share on <b>Twitter</b></p>
           </div>
         </div>
       </div>
-      <div class="certified-internships">
-        <div class="intern-opportunities">
-          <div class="title-int-opportunities">
-            <h5>Checkout our latest internships opportunities:</h5>
-          </div>
-          <div class="cards-certified-internships">
-            <div class="row">
-              <div class="col-xs-6 col-lg-3">
-                <div class="opportunity-card">
-                  <div class="logo">
-                    <div class="logo-micro">
-                    </div>
-                  </div>
-                  <div class="text-opportunity">
-                    <div class="title-internship">
-                      <b>Product Dev</b>
-                    </div>
-                    <div class="location">
-                      Lisbon, Portugal
-                    </div>
-                  </div>
-                  <div class="tag_and_icons_summary">
-                    <div class="tag-champion tag">
-                      champion
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-lg-3">
-                <div class="opportunity-card">
-                  <div class="logo-micro">
-                  </div>
-                  <div class="title-internship">
-                    <b>Product Designer</b>
-                  </div>
-                  <div class="location">
-                    Barcelona, Spain
-                  </div>
-                  <div class="tag-advanced tag">
-                    advanced
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-lg-3">
-                <div class="opportunity-card">
-                  <div class="logo-micro">
-                  </div>
-                  <div class="title-internship">
-                    <b>Product Manager</b>
-                  </div>
-                  <div class="location">
-                    Paris, France
-                  </div>
-                  <div class="tag-advanced tag">
-                    advanced
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-6 col-lg-3">
-
-                <div class="opportunity-card">
-                  <div class="logo-micro">
-                  </div>
-                  <div class="title-internship">
-                    <b>Product Manager</b>
-                  </div>
-                  <div class="location">
-                    Paris, France
-                  </div>
-                  <div class="tag-advanced tag">
-                    advanced
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="btn-summary btn-green">View more</a>
+      <div class="newsletter-field card-summary">
+        <div class="title-newsletter-card">
+          <div class="envelope-icon"></div>
+          <p>Subscribe to our newsletter<br>to see new certified internships.</p>
         </div>
-
+        <div class="submit-newsletter">
+          <form action="/">
+            <div class="input-newsletter">
+              <input type="text", placeholder="Email">
+            </div>
+            <div class="submit-newsletter-button">
+              <input type="submit", value="Subscribe", class="btn-newsletter">
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+  <div class="certified-internships">
+    <div class="intern-opportunities">
+      <div class="title-int-opportunities">
+        <h5>Checkout our latest internships opportunities:</h5>
+      </div>
+      <div class="cards-certified-internships">
+        <div class="opportunity-card">
+          <div class="logo">
+            <div class="logo-micro">
+            </div>
+          </div>
+          <div class="text-opportunity">
+            <div class="title-internship">
+              <b>Product Dev</b>
+            </div>
+            <div class="location">
+              Lisbon, Portugal
+            </div>
+          </div>
+          <div class="tag_and_icons_summary">
+            <div class="tag-champion tag">
+              champion
+            </div>
+          </div>
+        </div>
+        <div class="opportunity-card">
+          <div class="logo-micro">
+          </div>
+          <div class="title-internship">
+            <b>Product Designer</b>
+          </div>
+          <div class="location">
+            Barcelona, Spain
+          </div>
+          <div class="tag-advanced tag">
+            advanced
+          </div>
+        </div>
+        <div class="opportunity-card">
+          <div class="logo-micro">
+          </div>
+          <div class="title-internship">
+            <b>Product Manager</b>
+          </div>
+          <div class="location">
+            Paris, France
+          </div>
+          <div class="tag-advanced tag">
+            advanced
+          </div>
+        </div>
+        <div class="opportunity-card">
+          <div class="logo-micro">
+          </div>
+          <div class="title-internship">
+            <b>Product Manager</b>
+          </div>
+          <div class="location">
+            Paris, France
+          </div>
+          <div class="tag-advanced tag">
+            advanced
+          </div>
+        </div>
+      </div>
+      <div class="button-container-summary">
+        <div class="btn-view-offers">
+          <%= link_to "View More", offers_path, class: "see-offers-button" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+

@@ -3,24 +3,14 @@
   width: 169px;
   border-radius: 4px;
   margin: 50px 0px;
-  font-size: 20px;
-  padding-top: 10px;
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.btn-summary {
-  height: 52px;
-  width: 169px;
-  border-radius: 4px;
-  font-size: 20px;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
-  text-decoration: none;
+  font-size: 20px;
+  color: white !important;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .btn-green {

@@ -8,22 +8,22 @@ body {
   line-height: 18px;
 }
 
-// p, ol, ul, td {
-//   // Had to comment this out because it is interfering with the css
-//   // font-family: verdana, arial, helvetica, sans-serif;
-//    font-family: OpenSans;
-//    font-weight: normal;
-//    font-style: normal;
-//    font-stretch: normal;
-//    line-height: 21px;
-//    letter-spacing: normal;
-//    color: #4c4a4e;
+p, ol, ul, td {
+  // Had to comment this out because it is interfering with the css
+  // font-family: verdana, arial, helvetica, sans-serif;
+   font-family: OpenSans;
+   font-weight: normal;
+   font-style: normal;
+   font-stretch: normal;
+   line-height: 21px;
+   letter-spacing: normal;
+   color: #4c4a4e;
 
-// }
+}
 
-// p {
-//   font-size: 18px;
-// }
+p {
+  font-size: 18px;
+}
 
 pre {
   background-color: #eee;
@@ -47,7 +47,7 @@ pre {
 
 div {
   &.field, &.actions {
-    // margin-bottom: 10px;
+    margin-bottom: 10px;
   }
 }
 

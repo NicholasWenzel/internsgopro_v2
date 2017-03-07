@@ -9,26 +9,269 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
  */
 
-// CONFIGURATIONS
-@import "config/variables";
-@import "config/bootstrap_variables";
-
-// // EXTERNAL
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
-// // LOCAL SCSS
 @import "admin/application";
+
+// This imports all the files in components build by Unless
 @import "components/index";
-@import "employers";
-@import "offers";
-@import "pages";
-@import "places";
-@import "reviews";
-@import "scaffolds";
+@import "config/variables";
 
-@import "layout/index";
+// - - - - -Variables - - - - //
 
+$white: #FFFFFF;
+$orange: #ffa300;
+$blue: #2e1a47;
+$dark_grey: #7f7f7f;
+$light_grey: #d8dcde;
+
+// - - - - -End of Variables - - - - //
+
+
+.margin-top {
+  margin-top: 30px;
+  position: relative;
+}
+
+.page-header {
+          position: relative;
+          padding-bottom: 0px;
+          margin-top: 132px;
+          &:first-child {
+            margin-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  max-width: 55%;
+  }
+}
+
+.title-class {
+    text-align: center;
+     color: $orange;
+     font-size: 30px;
+     font-weight: 300;
+     line-height: 30px;
+     margin: 0;
+     margin-top: 30px;
+     margin-bottom: 10px;
+
+ }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.paragraph {
+    line-height: 23.8px;
+   text-align: center;
+   font-size: 14px;
+   color: #666666;
+   font-weight: 300;
+   padding-bottom: 30px;
+
+ }
+
+a {
+  color: #666;
+}
+
+// a:visited {
+//   color: $dark_grey;
+// }
+
+ul.actions {
+          @extend .list-unstyled;
+          @extend .list-inline;
+          position: absolute;
+          bottom: -2px;
+          right: 2px;
+          max-width: 45%;
+          text-align: right;
+}
+
+a.new {
+  @extend .btn;
+  @extend .btn-success;
+
+  &:before {
+    font-family: "FontAwesome";
+    @extend .fa-plus;
+    padding-right: 0.5em;
+  }
+}
+
+a.edit {
+  @extend .btn;
+  @extend .btn-primary;
+
+  &:before {
+    font-family: "FontAwesome";
+    @extend .fa-pencil;
+    padding-right: 0.5em;
+  }
+}
+
+a.delete {
+  @extend .btn;
+  @extend .btn-danger;
+  &:before {
+    font-family: "FontAwesome";
+    @extend .fa-trash;
+    padding-right: 0.5em;
+  }
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+tr {
+    cursor: pointer;
+}
+
+// CSS CUSTOM STYLING for NAVBAR //
+
+.navbar {
+  height: 80px;
+  padding-top: 18px;
+  margin-bottom: 0;
+  position: fixed;
+  top: 30px;
+}
+
+.navbar-default {
+  background-color: white;
+}
+
+.container {
+  padding: 0;
+  position: relative;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 100%;
+  line-height: 23px;
+  font-weight: 500;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  position: relative;
+}
+
+.navbar-header {
+  padding-bottom: 10px;
+}
+
+.navbar-brand {
+  padding: 0;
+  left: 25px;
+  position: relative;
+}
+
+#navbar-logo {
+display: inline-block;
+max-width: 250px;
+vertical-align: middle;
+background: #ffffff;
+}
+
+// CSS organe Topheader Styling //
+
+#top-header {
+    position: fixed;
+    background-color: #FFBD23;
+    z-index: 999999;
+    top: 0;
+    color: #000000;
+    width: 100%;
+    font-size: 12px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    display: block;
+
+}
+
+#top-header a {
+    color: rgba(0,0,0,0.5);
+
+}
+#top-header a.facebook, #top-header a.twitter {
+    margin-left: 10pt;
+}
+
+// For mobile responsive navbars //
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+        background-color: white;
+
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
+.signed-in {
+  float: right;
+}
+
+footer {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: solid #FFBD23 1px;
+    background-color: #DBDBDB;
+    color: #1D0248;
+}
+
+.margin-logo {
+  margin-bottom: 20px;
+}
+
+p.footer {
+  padding: 0;
+  margin-bottom: 0;
+}
